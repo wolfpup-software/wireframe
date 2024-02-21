@@ -24,14 +24,15 @@ function createSwitch(el: HTMLElement) {
 		
 		let attr = el.getAttribute("aria-checked");
 		attr === "false"
-			? el.setAttribute("true")
-			: el.setAttribute("false")	
+			? el.setAttribute("aria-checked", "true")
+			: el.setAttribute("aria-chjecked", "false")	
 	});
 }
 
 // add event listeners
 // add role
 // aria-checked
+/*
 class SwitchController() {
 	#callback: 
 	
@@ -104,4 +105,12 @@ class WireframeSwitch extends WFSwitch {
 		// do something about the change
 	}
 }
+*/
 
+class SwitchController extends HTMLElement {}
+
+class WireframeSwitch extends HTMLElement {}
+
+class WFSwitch extends WireframeSwitch {}
+
+export {SwitchController, WireframeSwitch, WFSwitch};
