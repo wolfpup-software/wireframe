@@ -1,0 +1,11 @@
+{
+  "main": "./dist/mod.js",
+  "scripts": {
+    "build": "tsc",
+    "fmt": "prettier ./ --write"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "typescript": "^5.3.3"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "wireframe",
+  "version": "0.1.0",
+  "description": "a11y components",
+  "workspaces": [
+    "components"
+  ],
+  "author": "taylor vann",
+  "license": "BSD-3-Clause",
+  "devDependencies": {
+    "prettier": "^3.2.4"
+  }
+}
