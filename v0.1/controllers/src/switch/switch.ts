@@ -2,14 +2,7 @@
 	https://www.w3.org/WAI/ARIA/apg/patterns/switch/
 */
 
-// min dom
-interface SwitchInterface {
-  shouldUpdate: boolean;
-}
-
-// add event listeners
-// add role
-// aria-checked
+import type {HTMLElementWithRender} from "../render/render.ts";
 
 function swapChecked(el: HTMLElement) {
   let attr = el.getAttribute("aria-checked");
@@ -20,10 +13,6 @@ function swapChecked(el: HTMLElement) {
 
 function createSwitch(el: HTMLElement) {
   el.setAttribute("role", "switch");
-
-  if (!el.getAttribute("tabindex")) {
-    el.setAttribute("tabindex", "0");
-  }
 }
 
 /*
@@ -45,68 +34,44 @@ are a reflection of the source of truth
 */
 
 interface SwitchControllerInterface {
-  queued_for_render: boolean;
+  setAttributes(el: HTMLElement): void;
   attributeChanged(
     el: HTMLElementWithRender,
     name: string,
     oldValue: string,
     newValue: string,
   ): void;
-  connectedCallback(): void;
-  disconnectedCallback(): void;
+  connectedCallback(el: HTMLElement): void;
+  disconnectedCallback(el: HTMLElement): void;
 }
 
 const switchAttributes = ["aria-checked"];
 const switchAttributeSet = new Set(switchAttributes);
 
-/*
-	State / the webcomponent will add event listeners.
-	The "checked" state is managed by the webcomponent attribute.
-	
-	The controller cares about updates. Should it try to render or not.
-	
-	Do not overide initial attributes
-	- tabindex
-	- aria-checked
-*/
-
-interface HTMLElementWithRender extends HTMLElement {
-  render(): void;
-}
-
 class SwitchController implements SwitchControllerInterface {
-  queued_for_render: boolean = false;
-
-  setDefinedAttributes(el: HTMLElement) {
+  setAttributes(el: HTMLElement) {
     el.setAttribute("role", "switch");
-    if (!el.getAttribute("tabindex")) {
-      el.setAttribute("tabindex", "0");
-    }
   }
-
+  
   attributeChanged(
-    el: HTMLElementWithRender,
+  	el: HTMLElementWithRender,
     name: string,
     oldValue: string,
     newValue: string,
-  ) {
-    // if attribute is in list
-    if (this.queued_for_render) return;
-    if (switchAttributeSet.has(name) === false) return;
-
-    // add to microtask queue
-    this.queued_for_render = true;
-    queueMicrotask(() => {
-      this.queued_for_render = false;
-      // something to render
-      el.render();
-    });
+   ) {
+  
   }
 
-  connectedCallback() {
-    // add keyboard and
+	// the switch controller doesn't have a need for updating attributes
+	// it has a single state that can be visualized through css transitions
+  connectedCallback(el: HTMLElement) {
+  	// add keyboard event
+  	// add mouse event
   }
-  disconnectedCallback() {}
+  
+  disconnectedCallback(el: HTMLElement) {
+  	// remove keyboard events
+  }
 }
 
 export type { SwitchControllerInterface };
