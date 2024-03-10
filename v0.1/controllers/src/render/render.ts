@@ -11,11 +11,13 @@ class QueueRender {
 	}
 	
 	attributeChanged(el: HTMLElementWithRender, attribute: string) {
+		if (this.#queued_for_update) return;
 		if (this.#attributes.has(attribute) == false) return;
 		this.queueRender(el);
 	}
 	
 	queueRender(el: HTMLElementWithRender) {
+		if (this.#queued_for_update) return;
 		this.#queued_for_update = true;
 		queueMicrotask(() => {
 			this.#queued_for_update = false;
