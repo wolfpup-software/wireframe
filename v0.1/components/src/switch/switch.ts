@@ -1,116 +1,46 @@
-/*
-	https://www.w3.org/WAI/ARIA/apg/patterns/switch/
-*/
+/* https://www.w3.org/WAI/ARIA/apg/patterns/switch/ */
 
-// min dom
-interface SwitchInterface {
-	shouldUpdate: boolean;
-}
+import { SwitchController } from "controllers";
 
-// add event listeners
-// add role
-// aria-checked
-function createSwitch(el: HTMLElement) {
-	el.setAttribute("role", "switch");
-	if (el.getAttribute("tabindex") !== null) {
-		el.setAttribute("tabindex", "0");
-	}
-	
-	el.addEventListener("pointerup", () => {
-	
-	});
-	el.addEventListener("keydown", (e: KeyboardEvent) => {
-		if (document.activeElement !== el) return;
-		
-		let attr = el.getAttribute("aria-checked");
-		attr === "false"
-			? el.setAttribute("aria-checked", "true")
-			: el.setAttribute("aria-chjecked", "false")	
-	});
-}
+// Think of a classic analogue switch on guitars, on off only one press
+// (albiet in opposite directions)
+// compared to a toggle (left and right locations to press for state)
+// required disabled aria-checked
+// this component doesn't really need a controller
 
-// add event listeners
-// add role
-// aria-checked
-/*
-class SwitchController() {
-	#callback: 
-	
-	connect() {
-		// add events and attributes
-	}
-	disconnect() {
-		// remove event
-	}
-	update() {
-		// exec callback that has render functions
-	}
-}
+// or a render, it's just css
+// which makes ssr very easy, same structure and styles
 
-function addEvents() {}
-function removeEvents() {}
+// [[][ ]   ] toggle off
+// [[   ][ ]] toggle on
 
-class WFSwitch extends HTMLElement {
-	static observedAttributes = ["aria-checked"];
-	#switchController = new SwitchController();
-
-	// form associated, element internals
-
-	// attributes are updated
-	// should update property called
-	attributeCallbackChanged() {
-		// mark update for the next 
-		this.#switchController.update(this);
-	}
-	connectedCallback() {
-		this.#switchController.addEvents(this);
-	}
-	disconnectedCallback() {
-		this.#switchController.removeEvents(this);
-	}
-	
-	// eventually there needs to be an update or render function to handle shadow dom
-	render() {}
-}
-
-// if aria-checked
-// if active
-// if focused
-// if disabled
-// if required
 const css = `
-	:host {}
-	:host([disabled]) {}
-	:host([aria-checked]) {}
-	
-	:root {
-		display: flex;
-		
-	}
+	:host {};
 `;
 
-// This reflects experience of the upstream developers
-class WireframeSwitch extends WFSwitch {
-	constructor() {
-		// this.#switchController.init()
-		
-		// make shadow dom
-		
-		// switch only needs a box and a container
-		// host -> one 
-	}
-
-	render() {
-		let checked = this.getAttribute("aria-checked") === "true";
-		// do something about the change
-	}
+function setupWfSwitch(el: HTMLElement) {
+  const shadowRoot = el.attachShadow({ mode: "open", delegatesFocus: true });
 }
-*/
 
-class SwitchController extends HTMLElement {}
+class SwitchWf extends HTMLElement {
+  // default settings? Primary only
+  #switchController = new SwitchController();
 
-class WireframeSwitch extends HTMLElement {}
+  constructor() {
+    super();
+  }
 
-class WFSwitch extends WireframeSwitch {}
+  connectedCallback() {
+    this.#switchController.connect(this);
+  }
 
-export {SwitchController, WireframeSwitch, WFSwitch};
+  disconnectedCallback() {
+    this.#switchController.disconnect(this);
+  }
+}
+
+function defineWfSwitch() {
+  customElements.define("switch-wf", SwitchWf);
+}
+
+export { SwitchWf };

@@ -1,4 +1,5 @@
 {
+  "name": "controllers",
   "main": "./dist/mod.js",
   "type": "module",
   "scripts": {

@@ -1,1 +1,1 @@
-export {SwitchController, WireframeSwitch, WFSwitch} from "./switch/switch.js";
+export { SwitchWf } from "./switch/switch.js";

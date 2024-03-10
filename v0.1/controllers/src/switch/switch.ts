@@ -2,7 +2,7 @@
 	https://www.w3.org/WAI/ARIA/apg/patterns/switch/
 */
 
-import type {HTMLElementWithRender} from "../render/render.ts";
+import type { HTMLElementWithRender } from "../render/render.ts";
 
 function swapChecked(el: HTMLElement) {
   let attr = el.getAttribute("aria-checked");
@@ -41,36 +41,45 @@ interface SwitchControllerInterface {
     oldValue: string,
     newValue: string,
   ): void;
-  connectedCallback(el: HTMLElement): void;
-  disconnectedCallback(el: HTMLElement): void;
+  connect(el: HTMLElement): void;
+  disconnect(el: HTMLElement): void;
 }
 
 const switchAttributes = ["aria-checked"];
 const switchAttributeSet = new Set(switchAttributes);
 
+// basic interaction
+function onKeyDown(e: KeyboardEvent) {
+  if (e.key !== "enter" && e.key !== "space") return;
+  // swapChecked(el);
+}
+
+function onPointerDown(e: PointerEvent) {
+  if (e.isPrimary === false) return;
+  // swapChecked(el);
+}
+
 class SwitchController implements SwitchControllerInterface {
   setAttributes(el: HTMLElement) {
     el.setAttribute("role", "switch");
   }
-  
+
   attributeChanged(
-  	el: HTMLElementWithRender,
+    el: HTMLElementWithRender,
     name: string,
     oldValue: string,
     newValue: string,
-   ) {
-  
+  ) {}
+
+  // the switch controller doesn't have a need for updating attributes
+  // it has a single state that can be visualized through css transitions
+  connect(el: HTMLElement) {
+    // add keyboard event
+    // add mouse event
   }
 
-	// the switch controller doesn't have a need for updating attributes
-	// it has a single state that can be visualized through css transitions
-  connectedCallback(el: HTMLElement) {
-  	// add keyboard event
-  	// add mouse event
-  }
-  
-  disconnectedCallback(el: HTMLElement) {
-  	// remove keyboard events
+  disconnect(el: HTMLElement) {
+    // remove keyboard events
   }
 }
 
