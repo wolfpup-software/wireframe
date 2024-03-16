@@ -1,16 +1,23 @@
 {
   "name": "wireframe_catalog",
+  "main": "./dist/mod.js",
   "version": "0.1.0",
   "description": "a11y component catalog",
   "author": "taylor vann",
+  "type": "module",
   "scripts": {
     "build": "tsc --project ./tsconfig.json",
+    "bundle": "rollup --config ./rollup.config.js",
     "fmt": "prettier ./ --write"
   },
   "license": "BSD-3-Clause",
   "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.3",
     "prettier": "^3.2.5",
     "rollup": "^4.12.1",
     "typescript": "^5.4.2"
+  },
+  "dependencies": {
+    "wireframe": "file:../../v0.1"
   }
 }

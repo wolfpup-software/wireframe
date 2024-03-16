@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "a11y components",
   "workspaces": [
-  	"controllers",
+    "controllers",
     "components"
   ],
   "author": "taylor vann",

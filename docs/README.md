@@ -1,3 +1,3 @@
 # Catalog
 
-A display of `Wireframe` elements. 
+A display of `Wireframe` elements.

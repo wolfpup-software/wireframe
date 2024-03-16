@@ -1,6 +1,6 @@
 /* https://www.w3.org/WAI/ARIA/apg/patterns/switch/ */
 
-import { SwitchController } from "controllers";
+import { SwitchController, switchAttributes } from "controllers";
 
 // Think of a classic analogue switch on guitars, on off only one press
 // (albiet in opposite directions)
@@ -23,6 +23,9 @@ function setupWfSwitch(el: HTMLElement) {
 }
 
 class SwitchWf extends HTMLElement {
+  // static formAssociated = true;
+  static observedAttributes = switchAttributes;
+
   // default settings? Primary only
   #switchController = new SwitchController();
 

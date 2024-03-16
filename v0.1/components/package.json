@@ -1,5 +1,5 @@
 {
-  "name": "package.json",
+  "name": "components",
   "main": "./dist/mod.js",
   "type": "module",
   "scripts": {
