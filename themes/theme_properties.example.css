@@ -1,0 +1,21 @@
+/*
+
+    global properties
+    make sure ONLY relavent to components 
+
+    theres a lot of repetition between elements
+    can generally strike out a lot of values
+*/
+
+:root {
+  --wf-background: transparent;
+  --wf-background-focus: transparent;
+  --wf-background-active: transparent;
+  --wf-font: serif;
+  --wf-font_color-focus: serif;
+  --wf-font_color-active: serif;
+  --wf-padding: 0.2rem 0.3rem;
+  --wf-outline: 1px grey solid;
+  --wf-outline-focus: 1px grey solid;
+  --wf-outline-active: 1px grey solid;
+}
