@@ -1,0 +1,24 @@
+input[type=checkbox] {
+	appearance: none;
+	position: relative;
+	display: inline-block;
+	box-sizing: border-box;
+	block-size: 1.75rem;
+	inline-size: 1.75rem;
+	border: 1px solid black;
+	border-radius: 0.1rem;
+	background: transparent;
+}
+
+input[type=checkbox]::before {
+	content: '';
+	display: block;
+	box-sizing: border-box;
+	margin-block-start: 0.125rem;
+	margin-inline-start: 0.125rem;
+	block-size: 1.5rem;
+	inline-size: 1.5rem;
+	border: 1px solid black;
+	border-radius: 0.1rem;
+	background: transparent;
+}

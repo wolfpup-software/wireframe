@@ -1,5 +1,0 @@
-.wf-button {
-  background: var(--wf-button_background, transparent);
-  font: var(--wf-button_font, serif);
-  padding: var(--wf-button_padding, 0.2rem 0.3rem);
-}

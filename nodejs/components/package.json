@@ -1,7 +1,5 @@
 {
-  "workspaces": [
-    "switch"
-  ],
+  "workspaces": [],
   "scripts": {
     "build": "npm run --workspaces build ",
     "fmt": "npx prettier --write ./"

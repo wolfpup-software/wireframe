@@ -1,0 +1,22 @@
+input[type=checkbox][role=switch] {
+	appearance: none;
+	position: relative;
+	display: inline-flex;
+	block-size: 1.75rem;
+	inline-size: 3rem;
+	border: 1px solid black;
+	border-radius: 1.75rem;
+	background: transparent;
+}
+  
+input[type=checkbox][role=switch]::before {
+	content: '';
+	display: block;
+	margin-block-start: 0.125rem;
+	margin-inline-start: 0.125rem;
+	block-size: 1.5rem;
+	inline-size: 1.5rem;
+	border: 1px solid black;
+	border-radius: 1.5rem;
+	background: transparent;
+}
