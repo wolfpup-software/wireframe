@@ -28,3 +28,8 @@
 * tree view
 * treegrid
 * window splitter
+
+## OLD NEWS
+
+* chips (is this not a checkbox??)
+* navigation panels and rows (application specific?)
