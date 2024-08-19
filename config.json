@@ -1,0 +1,6 @@
+{
+    "pages": [
+        ["home", "www/index.html"],
+        ["checkbox", "www/checkbox/index.html"]
+    ]
+}

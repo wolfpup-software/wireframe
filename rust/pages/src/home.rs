@@ -3,8 +3,9 @@ use coyote::{attr_val, tmpl, Component};
 
 use crate::document::document_frame;
 
-// metas can be computed
-// no scripts yet?
+// intro to the wireframe components
+// should demo all the components quickly
+// links to catalog page
 
 fn body() -> Component {
     tmpl(
@@ -12,6 +13,11 @@ fn body() -> Component {
         <header></header>
         <main>
             <p>hai :3</p>
+            <nav>
+                <ol>
+                    <li><a href=/checkbox>checkbox</a></li>
+                </ol>
+            </nav>
         </main>
         <footer></footer>
         ",
