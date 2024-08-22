@@ -1,0 +1,1 @@
+cargo run --manifest-path ./rust/Cargo.toml --package generate_pages -- ./config.json 

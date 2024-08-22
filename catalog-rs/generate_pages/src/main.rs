@@ -12,6 +12,15 @@ use coyote_html::{pretty_html, Html, Sieve};
 
 use pages;
 
+async fn create_page(name: &str) -> Option<Component> {
+    let page = match name {
+        "home" => pages::home::page(),
+        _ => return None,
+    };
+
+    Some(page)
+}
+
 async fn write_page(target_filename: &PathBuf, document: String) -> Result<(), std::io::Error> {
     let mut file = match File::create(target_filename).await {
         Ok(file) => file,

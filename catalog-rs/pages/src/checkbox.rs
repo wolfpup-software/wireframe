@@ -59,7 +59,7 @@ fn component_token_bar() -> Component {
     tmpl(
         "
         <form>
-			<label><input type=number></input>block-size</label>
+			<label><input type=number>block-size</label>
 		</form>
         ",
         [],
@@ -74,7 +74,7 @@ fn body() -> Component {
             {}
             {}
             <section>
-			    <label><input type=checkbox>checkbox</input></label>
+			    <label><input type=checkbox>checkbox</label>
             </section>
         </main>   
         <footer></footer>
