@@ -1,5 +1,5 @@
 [package]
-name = "generate_pages"
+name = "generate_catalog"
 version = "0.1.0"
 edition = "2021"
 
@@ -9,4 +9,4 @@ coyote = { workspace = true }
 coyote_html = { workspace = true }
 config = { path = "../config" }
 futures = { workspace = true }
-pages = { path = "../pages" }
+catalog_pages = { path = "../catalog_pages" }

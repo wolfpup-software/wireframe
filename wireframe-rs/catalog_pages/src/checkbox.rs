@@ -1,8 +1,8 @@
 use coyote::Component::None;
-use coyote::{attr_val, tmpl, text, Component};
+use coyote::{attr_val, text, tmpl, Component};
 
-use crate::document::document_frame;
-use crate::catalog::{design_system_bar, css as dt_css};
+use components::catalog::{css as dt_css, design_system_bar};
+use components::document::document_frame;
 
 // read file to string
 // make a css bundler
@@ -41,16 +41,19 @@ fn css() -> Component {
         input[type=checkbox]:checked::before {
             background: black;
         }
-        "
+        ",
     )
 }
 
 // build something to import this via css files
 fn styles() -> Component {
-    tmpl("
-        <style>{}</style>
-        <style>{}</style>
-        ", 
+    tmpl(
+        "
+        <style>
+            {}
+            {}
+        </style>
+        ",
         [dt_css(), css()],
     )
 }
@@ -79,16 +82,16 @@ fn body() -> Component {
         </main>   
         <footer></footer>
         ",
-        [design_system_bar(), component_token_bar()]
+        [design_system_bar(), component_token_bar()],
     )
 }
 
 pub fn page() -> Component {
     document_frame(
         attr_val("lang", "en-us"),
-        None,   // meta
-        styles(),   // styles
-        None,   // scripts
-        body(), // body
+        None,     // meta
+        styles(), // styles
+        None,     // scripts
+        body(),   // body
     )
 }

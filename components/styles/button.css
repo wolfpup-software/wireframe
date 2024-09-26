@@ -1,0 +1,31 @@
+button {
+	border-radius: 4px;
+	position: relative;
+	box-sizing: border-box;
+	border: 1px solid black;
+	padding: 0.5rem;
+	background: transparent;
+	cursor: pointer;
+}
+
+button[type=submit] {
+	border-radius: 4px;
+	position: relative;
+	box-sizing: border-box;
+	border: 1px solid black;
+	padding: 0.5rem;
+	background: #010101;
+	cursor: pointer;
+	color: white;
+}
+
+button[type=reset] {
+	border-radius: 0.25 rem;
+	position: relative;
+	box-sizing: border-box;
+	border: 1px solid black;
+	padding: 0.5rem;
+	background: gray;
+	cursor: pointer;
+	color: white;
+}

@@ -21,8 +21,6 @@ pub async fn from_filepath(filepath: &PathBuf) -> Result<Config, String> {
         _ => return Err("no parent directory!, crazy!".to_string()),
     };
 
-    println!("{:?}", parent_dir);
-
     // build json conifg
     let json_as_str = match fs::read_to_string(&config_pathbuff).await {
         Ok(r) => r,
@@ -37,7 +35,6 @@ pub async fn from_filepath(filepath: &PathBuf) -> Result<Config, String> {
     for (name, address) in &config.pages {
         // get parent then join on parent of config
         let path = parent_dir.join(address);
-
         pages.push((name.to_string(), path));
     }
 

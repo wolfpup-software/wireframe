@@ -11,6 +11,18 @@ Every component is:
 - implemented with CSS where possible
 - a web component if not
 
+## Components
+
+### CSS Only
+
+- checkbox
+- radio
+- switch
+
+### Web components
+
+- inline-focus
+
 ## License
 
 `Wireframe` is released under the BSD 3-clause License.

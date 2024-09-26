@@ -1,7 +1,8 @@
 [package]
-name = "pages"
+name = "catalog_pages"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
 coyote = { workspace = true }
+components = { path = "../components" }

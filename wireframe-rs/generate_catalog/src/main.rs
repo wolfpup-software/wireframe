@@ -15,6 +15,7 @@ use pages;
 async fn create_page(name: &str) -> Option<Component> {
     let page = match name {
         "home" => pages::home::page(),
+        "checkbox" => pages::checkbox::page(),
         _ => return None,
     };
 
@@ -49,6 +50,11 @@ async fn generate_pages(config: &config::Config) -> Result<(), std::io::Error> {
     let pretty_sieve = Sieve::new();
     for (name, target_filename) in &config.pages {
         let path = curr_dir.join(target_filename);
+        let parent_path = match path.parent() {
+            Some(p) => p,
+            _ => continue, // incorrect but to get past current error;
+        };
+
         let page = match create_page(name).await {
             Some(p) => p,
             _ => continue,
@@ -56,11 +62,6 @@ async fn generate_pages(config: &config::Config) -> Result<(), std::io::Error> {
 
         let document = html.build(&page);
         let pretty_document = pretty_html(&pretty_sieve, &document);
-
-        let parent_path = match path.parent() {
-            Some(p) => p,
-            _ => &path, // incorrect but to get past current error;
-        };
 
         // get absolte and check if starts with the targt_filepath
         let _ = fs::create_dir_all(parent_path).await;
@@ -75,8 +76,6 @@ async fn generate_pages(config: &config::Config) -> Result<(), std::io::Error> {
             Ok(file) => file,
             Err(e) => return Err(e),
         };
-
-        println!("{:?}", file)
     }
 
     Ok(())
@@ -84,9 +83,6 @@ async fn generate_pages(config: &config::Config) -> Result<(), std::io::Error> {
 
 #[tokio::main]
 async fn main() {
-    println!("{:?}", std::env::current_dir());
-
-    // create config
     let args = match env::args().nth(1) {
         Some(a) => PathBuf::from(a),
         None => return println!("argument error:\nconfig params not found."),
@@ -97,5 +93,4 @@ async fn main() {
     };
 
     let results = generate_pages(&config).await;
-    println!("{:?}", &results);
 }

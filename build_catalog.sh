@@ -1,1 +1,1 @@
-cargo run --manifest-path ./rust/Cargo.toml --package generate_pages -- ./config.json 
+cargo run --manifest-path ./wireframe-rs/Cargo.toml --package generate_catalog -- ./config.json

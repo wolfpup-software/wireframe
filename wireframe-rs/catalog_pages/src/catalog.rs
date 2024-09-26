@@ -24,7 +24,3 @@ pub fn css() -> Component {
         ",
     )
 }
-
-// stage
-// design system as css custom properies
-
