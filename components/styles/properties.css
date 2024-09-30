@@ -1,0 +1,15 @@
+/*
+	split into three distinct categories
+	- informational (text)
+	- interactive (local state)
+	- remote (forms, submissions)
+*/
+
+:root {
+	--background: white;
+	--color-primary: black;
+	--color-secondary: blue;
+	--font: monospace;
+	--font-header: monospace;
+	--font-code: monospace;
+}

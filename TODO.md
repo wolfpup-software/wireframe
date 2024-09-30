@@ -12,6 +12,9 @@ dialog
 menu
 
 
+button
+menu
+
 If the component requires Shadow DOM
 There needs to be a way to apply a template
 But that involves a framework, There needs to be

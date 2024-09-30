@@ -1,23 +1,28 @@
 # Wireframe
 
-`Wireframe` is a collection of radically impactful web components.
+`Wireframe` is a component set built for the web.
 
-## Mission statement
-
-Every component is:
-- based on an [aria pattern](https://www.w3.org/WAI/ARIA/apg/patterns/)
-- rtl compatible
-- theme-able
-- implemented with CSS where possible
-- a web component if not
+- css only where possible
+- framework agnostic custom-elements
+- aria compliant out of the box
+- no replaced elements
+https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element
+- no abstract roles
+https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles#6._abstract_roles
 
 ## Components
 
 ### CSS Only
 
+- button
 - checkbox
+- chip
+- color
+- date
 - radio
 - switch
+- textarea
+- textfield
 
 ### Web components
 

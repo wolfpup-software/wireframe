@@ -1,0 +1,21 @@
+input[type=text] {
+	padding: 0.5rem 0.5rem;
+	border: none;
+	border-bottom: 1px solid black;
+	background: transparent;
+}
+
+label:has(input[type=text]) {
+	display: inline-flex;
+	flex-direction: column;
+	border-radius: 2px;
+}
+
+label:has(input[type=text]:focus) {
+	outline: 1px solid blue;
+	outline-offset: 4px;
+}
+
+label:has(input[type=text]:focus) input[type=text]:focus {
+	outline: none;
+}

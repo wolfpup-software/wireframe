@@ -12,7 +12,7 @@ input[type=checkbox] {
 	cursor: pointer;
 }
 
-input[type=checkbox]::after {
+input[type=checkbox]::before {
 	content: '';
 	display: block;
 	box-sizing: border-box;
@@ -24,7 +24,7 @@ input[type=checkbox]::after {
 	background: transparent;
 }
 
-input[type=checkbox]:checked::after {
+input[type=checkbox]:checked::before {
 	outline: 1px solid black;
 	background: black;
 }
