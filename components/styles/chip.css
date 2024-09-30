@@ -1,0 +1,16 @@
+label[chip] {
+	display: inline-flex;
+	padding: 0.5rem 1rem;
+	border: 1px solid black;
+	border-radius: 2rem;
+	cursor: pointer;
+}
+
+label[chip]:has(input:checked) {
+	background: grey;
+	color: white;
+}
+
+label[chip] input {
+	display: none;
+}

@@ -1,0 +1,12 @@
+[package]
+name = "generate_catalog"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { workspace = true }
+coyote = { workspace = true }
+coyote_html = { workspace = true }
+config = { path = "../config" }
+futures = { workspace = true }
+catalog_pages = { path = "../catalog_pages" }

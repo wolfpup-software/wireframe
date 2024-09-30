@@ -1,0 +1,10 @@
+label:has(input:focus) {
+	outline: 1px solid blue;
+	outline-offset: 4px;
+}
+
+label input:focus {
+	outline: none;
+}
+
+/* pointer types for different kinds of inputs */

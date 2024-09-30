@@ -1,0 +1,19 @@
+/*
+	split into three distinct categories
+	- informational (text)
+	- interactive (local state)
+	- remote (forms, submissions)
+*/
+
+/*
+	There are always exceptions.
+	Broad strokes.
+*/
+:root {
+	/* inputs for forms */
+	--input-background: transparent;
+	--input-border: 1px solid black;
+	--input-outline: 1px solid blue;
+	--input-outline-offset: 8px;
+	--input-font-family: serif;
+}
