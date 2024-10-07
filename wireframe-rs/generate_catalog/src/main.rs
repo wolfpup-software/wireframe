@@ -8,7 +8,7 @@ use tokio::fs::File;
 use tokio::io::AsyncWriteExt;
 
 use coyote::Component;
-use coyote_html::{pretty_html, Html, Sieve};
+use coyote_html::{Html, Sieve};
 
 use pages;
 
@@ -60,8 +60,7 @@ async fn generate_pages(config: &config::Config) -> Result<(), std::io::Error> {
             _ => continue,
         };
 
-        let document = html.build(&page);
-        let pretty_document = pretty_html(&pretty_sieve, &document);
+        let document = html.build(&pretty_sieve, &page);
 
         // get absolte and check if starts with the targt_filepath
         let _ = fs::create_dir_all(parent_path).await;
@@ -72,7 +71,7 @@ async fn generate_pages(config: &config::Config) -> Result<(), std::io::Error> {
             Err(e) => return Err(e),
         };
 
-        let result = match file.write_all(pretty_document.as_bytes()).await {
+        let result = match file.write_all(document.as_bytes()).await {
             Ok(file) => file,
             Err(e) => return Err(e),
         };

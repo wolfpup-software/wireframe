@@ -9,4 +9,4 @@ coyote = { workspace = true }
 coyote_html = { workspace = true }
 config = { path = "../config" }
 futures = { workspace = true }
-catalog_pages = { path = "../catalog_pages" }
+pages = { path = "../pages" }

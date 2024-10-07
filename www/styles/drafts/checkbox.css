@@ -28,3 +28,6 @@ input[type=checkbox]:checked::before {
 	outline: 1px solid black;
 	background: black;
 }
+
+
+input[type=checkbox] indeterminate {}

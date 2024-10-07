@@ -1,0 +1,12 @@
+:root {
+	/* motion */
+	--duration: 250ms;
+
+	/* focus */
+	--focus-outline: 2px solid blue;
+	--focus-outline-offset: 8px;
+
+	/* inputs for forms */
+	--input-background: transparent;
+	--input-border: 2px solid black;
+}
