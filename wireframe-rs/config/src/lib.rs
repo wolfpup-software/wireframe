@@ -7,6 +7,7 @@ use std::path::PathBuf;
 #[derive(Clone, Serialize, Deserialize, Debug)]
 pub struct Config {
     pub pages: Vec<(String, PathBuf)>,
+    pub components: Vec<String>,
 }
 
 pub async fn from_filepath(filepath: &PathBuf) -> Result<Config, String> {
@@ -38,5 +39,5 @@ pub async fn from_filepath(filepath: &PathBuf) -> Result<Config, String> {
         pages.push((name.to_string(), path));
     }
 
-    Ok(Config { pages: pages })
+    Ok(Config { pages: pages, components: config.components })
 }
