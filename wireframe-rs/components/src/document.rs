@@ -3,7 +3,7 @@ use coyote::{attr_val, text, tmpl, Component};
 pub fn document_frame(
     language: Component,
     metas: Component,
-    styles: Component,
+    style_component: Component,
     scripts: Component,
     content: Component,
 ) -> Component {
@@ -20,26 +20,11 @@ pub fn document_frame(
                 {}
             </body>
         </html>",
-        [language, metas, styles, scripts, content],
+        [language, metas, style_component, scripts, content],
     )
 }
 
-pub fn template(attrs: Component, shadow_dom: Component, light_dom: Component) -> Component {
-    tmpl(
-        "
-        <template {}>
-            {}
-            {}
-        </template>",
-        [attrs, shadow_dom, light_dom],
-    )
-}
-
-pub fn lang() -> Component {
-    attr_val("lang", "en-us")
-}
-
-pub fn metas(title: &str, description: &str) -> Component {
+pub fn bare_minimum_metas(title: &str, description: &str) -> Component {
     tmpl(
         "
         <meta charset=utf-8>
@@ -47,6 +32,9 @@ pub fn metas(title: &str, description: &str) -> Component {
         <meta {}>
         <meta name=viewport content=\"width=device-width, initial-scale=1\">
         ",
-        [attr_val("title", title), attr_val("description", description)],
+        [
+            attr_val("title", title),
+            attr_val("description", description),
+        ],
     )
 }

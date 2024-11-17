@@ -7,6 +7,8 @@ use std::path::PathBuf;
 #[derive(Clone, Serialize, Deserialize, Debug)]
 pub struct Config {
     pub pages: Vec<(String, PathBuf)>,
+    pub styles: Vec<(String, PathBuf)>,
+    pub style_components: Vec<(String, PathBuf)>,
     pub components: Vec<String>,
 }
 
@@ -39,5 +41,24 @@ pub async fn from_filepath(filepath: &PathBuf) -> Result<Config, String> {
         pages.push((name.to_string(), path));
     }
 
-    Ok(Config { pages: pages, components: config.components })
+    let mut styles: Vec<(String, PathBuf)> = Vec::new();
+    for (name, address) in &config.pages {
+        // get parent then join on parent of config
+        let path = parent_dir.join(address);
+        pages.push((name.to_string(), path));
+    }
+
+    let mut style_components: Vec<(String, PathBuf)> = Vec::new();
+    for (name, address) in &config.style_components {
+        // get parent then join on parent of config
+        let path = parent_dir.join(address);
+        pages.push((name.to_string(), path));
+    }
+
+    Ok(Config {
+        pages: pages,
+        styles: styles,
+        style_components: style_components,
+        components: config.components,
+    })
 }

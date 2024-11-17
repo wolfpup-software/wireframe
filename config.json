@@ -1,12 +1,23 @@
 {
+    "components": [
+        "button",
+        "checkbox",
+        "chip",
+        "radio",
+        "switch",
+        "toggle"
+    ],
+    "style_components": [
+        ["baseboard", "styles/baseboard.css"],
+        ["inputs", "styles/inputs.css"]
+    ],
     "pages": [
         ["home", "www/index.html"],
-        ["checkbox", "www/checkbox/index.html"]
+        ["paper", "www/paper/index.html"],
+        ["marker", "www/marker/index.html"],
+        ["ascii", "www/ascii/index.html"]
     ],
-    "css_components": [
-        ["checkbox", "components/styles/checkbox.css"]
-    ],
-    "web_components": [
-        ["inline-focus", "components/js/inline-focus.js"]
+    "styles": [
+        ["bundled", "www/styles/bundled.css"]
     ]
 }

@@ -7,15 +7,38 @@ use tokio::fs;
 use tokio::fs::File;
 use tokio::io::AsyncWriteExt;
 
+use coyote::attr_val;
 use coyote::Component;
-use coyote_html::{Html, Sieve};
+use coyote_html::{Html, ServerRules};
 
 use pages;
+
+#[tokio::main]
+async fn main() {
+    let args = match env::args().nth(1) {
+        Some(a) => PathBuf::from(a),
+        None => return println!("argument error:\nconfig params not found."),
+    };
+    let config = match config::from_filepath(&args).await {
+        Ok(c) => c,
+        Err(e) => return println!("config error:\n{}", e),
+    };
+
+    // create styles
+    // create pages
+
+    // let styles_results = generate_styles();
+
+    let pages_results = generate_pages(&config).await;
+}
+
+pub fn lang() -> Component {
+    attr_val("lang", "en-us")
+}
 
 async fn create_page(name: &str) -> Option<Component> {
     let page = match name {
         "home" => pages::home::page(),
-        "checkbox" => pages::checkbox::page(),
         _ => return None,
     };
 
@@ -42,12 +65,9 @@ async fn generate_pages(config: &config::Config) -> Result<(), std::io::Error> {
         Err(e) => return Err(e),
     };
 
-    let sieve = Sieve::new();
     let mut html = Html::new();
+    let rules = ServerRules::new();
 
-    // batch process instead of writing each file
-    // let mut futures = Vec::new();
-    let pretty_sieve = Sieve::new();
     for (name, target_filename) in &config.pages {
         let path = curr_dir.join(target_filename);
         let parent_path = match path.parent() {
@@ -60,12 +80,11 @@ async fn generate_pages(config: &config::Config) -> Result<(), std::io::Error> {
             _ => continue,
         };
 
-        let document = html.build(&pretty_sieve, &page);
+        let document = html.build(&rules, &page);
 
         // get absolte and check if starts with the targt_filepath
         let _ = fs::create_dir_all(parent_path).await;
 
-        // futures.push(write_page(target_filename, document));
         let mut file = match File::create(&path).await {
             Ok(file) => file,
             Err(e) => return Err(e),
@@ -78,18 +97,4 @@ async fn generate_pages(config: &config::Config) -> Result<(), std::io::Error> {
     }
 
     Ok(())
-}
-
-#[tokio::main]
-async fn main() {
-    let args = match env::args().nth(1) {
-        Some(a) => PathBuf::from(a),
-        None => return println!("argument error:\nconfig params not found."),
-    };
-    let config = match config::from_filepath(&args).await {
-        Ok(c) => c,
-        Err(e) => return println!("config error:\n{}", e),
-    };
-
-    let results = generate_pages(&config).await;
 }

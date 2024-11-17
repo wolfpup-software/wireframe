@@ -6,7 +6,13 @@
 	--focus-outline: 2px solid blue;
 	--focus-outline-offset: 8px;
 
-	/* inputs for forms */
+	/* inputs */
 	--input-background: transparent;
+	--input-surface-color: black;
 	--input-border: 2px solid black;
+
+	/* input active state */
+
+	/* input disabled state */
+	--input-disabled-opacity: 0.5;
 }
