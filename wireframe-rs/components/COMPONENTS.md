@@ -4,7 +4,7 @@
 
 - close button
 - inline navigation
-- 
+- block navigation
 
 ## Aria Patterns
 

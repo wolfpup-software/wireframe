@@ -7,17 +7,5 @@
         "switch",
         "toggle"
     ],
-    "style_components": [
-        ["baseboard", "styles/baseboard.css"],
-        ["inputs", "styles/inputs.css"]
-    ],
-    "pages": [
-        ["home", "www/index.html"],
-        ["paper", "www/paper/index.html"],
-        ["marker", "www/marker/index.html"],
-        ["ascii", "www/ascii/index.html"]
-    ],
-    "styles": [
-        ["bundled", "www/styles/bundled.css"]
-    ]
+    "styles_dir": "./styles"
 }

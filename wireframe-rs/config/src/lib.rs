@@ -6,10 +6,8 @@ use std::path::PathBuf;
 
 #[derive(Clone, Serialize, Deserialize, Debug)]
 pub struct Config {
-    pub pages: Vec<(String, PathBuf)>,
-    pub styles: Vec<(String, PathBuf)>,
-    pub style_components: Vec<(String, PathBuf)>,
     pub components: Vec<String>,
+    pub styles_dir: PathBuf,
 }
 
 pub async fn from_filepath(filepath: &PathBuf) -> Result<Config, String> {
@@ -34,31 +32,10 @@ pub async fn from_filepath(filepath: &PathBuf) -> Result<Config, String> {
         Err(e) => return Err(e.to_string()),
     };
 
-    let mut pages: Vec<(String, PathBuf)> = Vec::new();
-    for (name, address) in &config.pages {
-        // get parent then join on parent of config
-        let path = parent_dir.join(address);
-        pages.push((name.to_string(), path));
-    }
-
-    let mut styles: Vec<(String, PathBuf)> = Vec::new();
-    for (name, address) in &config.pages {
-        // get parent then join on parent of config
-        let path = parent_dir.join(address);
-        pages.push((name.to_string(), path));
-    }
-
-    let mut style_components: Vec<(String, PathBuf)> = Vec::new();
-    for (name, address) in &config.style_components {
-        // get parent then join on parent of config
-        let path = parent_dir.join(address);
-        pages.push((name.to_string(), path));
-    }
+    let styles_dir = parent_dir.join(config.styles_dir);
 
     Ok(Config {
-        pages: pages,
-        styles: styles,
-        style_components: style_components,
+        styles_dir: styles_dir,
         components: config.components,
     })
 }

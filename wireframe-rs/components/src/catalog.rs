@@ -9,12 +9,7 @@ const COMPONENTS: [&'static [&'static str; 3]; 1] =
 
 // creates an <input> section
 pub fn create_input_component(attrs: Component) -> Component {
-    tmpl(
-        "
-			<input {}>
-		",
-        [attrs],
-    )
+    tmpl("<input {}>", [attrs])
 }
 
 pub fn create_component_chonk(

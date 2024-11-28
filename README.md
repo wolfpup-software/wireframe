@@ -13,3 +13,13 @@ Each set is designed to connect function to a locality.
 ## License
 
 `Wireframe` is released under the BSD 3-clause License.
+
+
+## Config
+
+```JSON
+{
+	"components": [],
+	"styles": "./yo/",
+}
+```

@@ -4,7 +4,6 @@
 // .css
 // .js
 
-use std::path::Path;
 use std::path::PathBuf;
 use tokio::fs::read_dir;
 
@@ -23,27 +22,23 @@ pub async fn generate_assets(
         Err(e) => return Err(e.to_string()),
     };
 
+    // iterate throuh entries
+    // add to dir_stack if directory
+    // otherwise copy file to location
     while let Ok(entry_attempt) = dir_iter.next_entry().await {
         if let Some(entry) = entry_attempt {
-            println!("{:?}", entry.path());
-
-			let path = entry.path();
-
+            let path = entry.path();
             if path.is_dir() {
                 dir_stack.push(entry.path().clone());
             }
 
-			if path.is_file() {
-				// check extension
-				// copy file to location
-			}
-            // is file?
-            // check if file has the correct extension
-            // copy file to destination file
-
-            // is directory? add directory to directory queue
+            if path.is_file() {
+                // check extension
+                // copy file to location
+            }
         }
     }
+    
     // keep walking
     Ok(())
 }
