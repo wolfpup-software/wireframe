@@ -1,11 +1,3 @@
 {
-    "components": [
-        "button",
-        "checkbox",
-        "chip",
-        "radio",
-        "switch",
-        "toggle"
-    ],
-    "styles_dir": "./styles"
+    "app_dir": "./wwww"
 }

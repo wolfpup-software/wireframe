@@ -13,6 +13,8 @@ use coyote_html::{Html, ServerRules};
 
 use pages;
 
+const page_addresses: [(&str, &str); 1] = [("home", "./index.html")];
+
 #[tokio::main]
 async fn main() {
     let args = match env::args().nth(1) {
@@ -68,12 +70,14 @@ async fn generate_pages(config: &config::Config) -> Result<(), std::io::Error> {
     let mut html = Html::new();
     let rules = ServerRules::new();
 
-    for (name, target_filename) in &config.pages {
+    for (name, target_filename) in page_addresses {
         let path = curr_dir.join(target_filename);
         let parent_path = match path.parent() {
             Some(p) => p,
             _ => continue, // incorrect but to get past current error;
         };
+
+        let _ = fs::create_dir_all(parent_path).await;
 
         let page = match create_page(name).await {
             Some(p) => p,
@@ -82,17 +86,8 @@ async fn generate_pages(config: &config::Config) -> Result<(), std::io::Error> {
 
         let document = html.build(&rules, &page);
 
-        // get absolte and check if starts with the targt_filepath
-        let _ = fs::create_dir_all(parent_path).await;
-
-        let mut file = match File::create(&path).await {
-            Ok(file) => file,
-            Err(e) => return Err(e),
-        };
-
-        let result = match file.write_all(document.as_bytes()).await {
-            Ok(file) => file,
-            Err(e) => return Err(e),
+        if let Err(e) = fs::write(path, document).await {
+            return Err(e);
         };
     }
 

@@ -10,6 +10,15 @@ const description: &str = "A list of wireframe components";
 // baseboard
 // inputs
 
+const components: &[&str] = [
+    "button",
+    "checkbox",
+    "chip",
+    "radio",
+    "switch",
+    "toggle"
+];
+
 pub fn page() -> Component {
     let styles = tmpl(
         "

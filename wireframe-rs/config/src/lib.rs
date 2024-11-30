@@ -6,8 +6,7 @@ use std::path::PathBuf;
 
 #[derive(Clone, Serialize, Deserialize, Debug)]
 pub struct Config {
-    pub components: Vec<String>,
-    pub styles_dir: PathBuf,
+    pub app_dir: PathBuf,
 }
 
 pub async fn from_filepath(filepath: &PathBuf) -> Result<Config, String> {
@@ -32,10 +31,7 @@ pub async fn from_filepath(filepath: &PathBuf) -> Result<Config, String> {
         Err(e) => return Err(e.to_string()),
     };
 
-    let styles_dir = parent_dir.join(config.styles_dir);
+    let app_dir = parent_dir.join(config.app_dir);
 
-    Ok(Config {
-        styles_dir: styles_dir,
-        components: config.components,
-    })
+    Ok(Config { app_dir: app_dir })
 }
