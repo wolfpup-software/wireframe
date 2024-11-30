@@ -1,33 +1,25 @@
 # Wireframe
 
-`Wireframe` is a component set built for the web.
+`Wireframe-rs` is a component set built for the web.
 
-- css only where possible
-- framework agnostic custom-elements
-- aria compliant out of the box
-- no replaced elements
-https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element
-- no abstract roles
-https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles#6._abstract_roles
+## Component Sets
 
-## Components
+Each set is designed to connect function to a locality.
 
-### CSS Only
-
-- button
-- checkbox
-- chip
-- color
-- date
-- radio
-- switch
-- textarea
-- textfield
-
-### Web components
-
-- inline-focus
+- [Paper]() is based on paper prototyping. Professional, clean enough for readable high density content. 
+- [Ascii]() references BIOS interfaces and 90s operating systems. It is beauracractic, formal, and clear. 
+- [Marker]() permanent marker. Casual, relaxed. Low density, low friction experiences.
 
 ## License
 
 `Wireframe` is released under the BSD 3-clause License.
+
+
+## Config
+
+```JSON
+{
+	"components": [],
+	"styles": "./yo/",
+}
+```

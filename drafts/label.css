@@ -1,6 +1,6 @@
 label:has(input:focus) {
-	outline: 1px solid blue;
-	outline-offset: 4px;
+	outline: var(--focus-outline);
+	outline-offset: var(--focus-outline-offset);
 }
 
 label input:focus {

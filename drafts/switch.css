@@ -1,18 +1,17 @@
-input[type=radio] {
+input[type=checkbox][role=switch] {
 	appearance: none;
 	position: relative;
 	vertical-align: text-bottom;
 	display: inline-block;
 	box-sizing: border-box;
 	block-size: 1rem;
-	inline-size: 1rem;
+	inline-size: 2rem;
 	outline: 1px solid black;
-	border-radius: 1rem;
 	background: transparent;
 	cursor: pointer;
 }
 
-input[type=radio]::after {
+input[type=checkbox][role=switch]::before {
 	content: '';
 	display: block;
 	box-sizing: border-box;
@@ -20,10 +19,15 @@ input[type=radio]::after {
 	margin-inline-start: 0.25rem;
 	block-size: 0.5rem;
 	inline-size: 0.5rem;
-	border-radius: 0.5rem;
+	outline: 1px solid black;
 	background: transparent;
 }
 
-input[type=radio]:checked::after {
+input[type=checkbox][role=switch]:checked::before {
 	background: black;
+	margin-inline-start: 1.25rem;
 }
+
+input[type=checkbox][role=switch]:indeterminate {}
+
+input[type=checkbox][role=switch]:disabled {}

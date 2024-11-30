@@ -6,7 +6,7 @@ use std::path::PathBuf;
 
 #[derive(Clone, Serialize, Deserialize, Debug)]
 pub struct Config {
-    pub pages: Vec<(String, PathBuf)>,
+    pub app_dir: PathBuf,
 }
 
 pub async fn from_filepath(filepath: &PathBuf) -> Result<Config, String> {
@@ -31,12 +31,7 @@ pub async fn from_filepath(filepath: &PathBuf) -> Result<Config, String> {
         Err(e) => return Err(e.to_string()),
     };
 
-    let mut pages: Vec<(String, PathBuf)> = Vec::new();
-    for (name, address) in &config.pages {
-        // get parent then join on parent of config
-        let path = parent_dir.join(address);
-        pages.push((name.to_string(), path));
-    }
+    let app_dir = parent_dir.join(config.app_dir);
 
-    Ok(Config { pages: pages })
+    Ok(Config { app_dir: app_dir })
 }

@@ -7,15 +7,40 @@ use tokio::fs;
 use tokio::fs::File;
 use tokio::io::AsyncWriteExt;
 
+use coyote::attr_val;
 use coyote::Component;
-use coyote_html::{pretty_html, Html, Sieve};
+use coyote_html::{Html, ServerRules};
 
 use pages;
+
+const page_addresses: [(&str, &str); 1] = [("home", "./index.html")];
+
+#[tokio::main]
+async fn main() {
+    let args = match env::args().nth(1) {
+        Some(a) => PathBuf::from(a),
+        None => return println!("argument error:\nconfig params not found."),
+    };
+    let config = match config::from_filepath(&args).await {
+        Ok(c) => c,
+        Err(e) => return println!("config error:\n{}", e),
+    };
+
+    // create styles
+    // create pages
+
+    // let styles_results = generate_styles();
+
+    let pages_results = generate_pages(&config).await;
+}
+
+pub fn lang() -> Component {
+    attr_val("lang", "en-us")
+}
 
 async fn create_page(name: &str) -> Option<Component> {
     let page = match name {
         "home" => pages::home::page(),
-        "checkbox" => pages::checkbox::page(),
         _ => return None,
     };
 
@@ -42,55 +67,29 @@ async fn generate_pages(config: &config::Config) -> Result<(), std::io::Error> {
         Err(e) => return Err(e),
     };
 
-    let sieve = Sieve::new();
     let mut html = Html::new();
+    let rules = ServerRules::new();
 
-    // batch process instead of writing each file
-    // let mut futures = Vec::new();
-    let pretty_sieve = Sieve::new();
-    for (name, target_filename) in &config.pages {
+    for (name, target_filename) in page_addresses {
         let path = curr_dir.join(target_filename);
         let parent_path = match path.parent() {
             Some(p) => p,
             _ => continue, // incorrect but to get past current error;
         };
 
+        let _ = fs::create_dir_all(parent_path).await;
+
         let page = match create_page(name).await {
             Some(p) => p,
             _ => continue,
         };
 
-        let document = html.build(&page);
-        let pretty_document = pretty_html(&pretty_sieve, &document);
+        let document = html.build(&rules, &page);
 
-        // get absolte and check if starts with the targt_filepath
-        let _ = fs::create_dir_all(parent_path).await;
-
-        // futures.push(write_page(target_filename, document));
-        let mut file = match File::create(&path).await {
-            Ok(file) => file,
-            Err(e) => return Err(e),
-        };
-
-        let result = match file.write_all(pretty_document.as_bytes()).await {
-            Ok(file) => file,
-            Err(e) => return Err(e),
+        if let Err(e) = fs::write(path, document).await {
+            return Err(e);
         };
     }
 
     Ok(())
-}
-
-#[tokio::main]
-async fn main() {
-    let args = match env::args().nth(1) {
-        Some(a) => PathBuf::from(a),
-        None => return println!("argument error:\nconfig params not found."),
-    };
-    let config = match config::from_filepath(&args).await {
-        Ok(c) => c,
-        Err(e) => return println!("config error:\n{}", e),
-    };
-
-    let results = generate_pages(&config).await;
 }

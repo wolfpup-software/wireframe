@@ -1,6 +1,6 @@
 [workspace]
 resolver = "2"
-members = [ "components","config", "generate_catalog", "catalog_pages", "generate_components"]
+members = [ "components", "config", "generate_assets", "generate_catalog", "pages"]
 
 [workspace.dependencies]
 coyote = { git = "https://github.com/wolfpup-software/coyote-rs", version = "0.1.0" }

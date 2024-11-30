@@ -25,6 +25,11 @@ input[type=checkbox]::before {
 }
 
 input[type=checkbox]:checked::before {
+	content: '\2714';
 	outline: 1px solid black;
 	background: black;
 }
+
+input[type=checkbox]:indeterminate {}
+
+input[type=checkbox]:disabled {}

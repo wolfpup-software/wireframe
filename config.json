@@ -1,12 +1,3 @@
 {
-    "pages": [
-        ["home", "www/index.html"],
-        ["checkbox", "www/checkbox/index.html"]
-    ],
-    "css_components": [
-        ["checkbox", "components/styles/checkbox.css"]
-    ],
-    "web_components": [
-        ["inline-focus", "components/js/inline-focus.js"]
-    ]
+    "app_dir": "./wwww"
 }
