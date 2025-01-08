@@ -2,18 +2,11 @@
 
 `Wireframe-rs` is a component set built for the web.
 
-## Component Sets
+## About
 
-Each set is designed to connect function to a locality.
+Wireframe is mostly a CSS library.
 
-- [Paper]() is based on paper prototyping. Professional, clean enough for readable high density content. 
-- [Ascii]() references BIOS interfaces and 90s operating systems. It is beauracractic, formal, and clear. 
-- [Marker]() permanent marker. Casual, relaxed. Low density, low friction experiences.
-
-## License
-
-`Wireframe` is released under the BSD 3-clause License.
-
+It also has some web components.
 
 ## Config
 
@@ -23,3 +16,7 @@ Each set is designed to connect function to a locality.
 	"styles": "./yo/",
 }
 ```
+
+## License
+
+`Wireframe` is released under the BSD 3-clause License.

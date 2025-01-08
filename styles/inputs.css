@@ -1,3 +1,10 @@
+/*
+--input-background-color
+--input-border
+--input-border-radius
+--input-padding
+*/
+
 input, button {
 	background-color: transparent;
 	border: 1px solid black;
@@ -9,4 +16,5 @@ input, button {
 input:focus, button:focus {
 	outline-offset: 4px;
 	outline: 2px solid #0088FF;
+	cursor: initial;
 }
