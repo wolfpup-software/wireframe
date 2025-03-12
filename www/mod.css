@@ -1,0 +1,16 @@
+/* wireframe component styles */
+@import "./styles/baseboard.css";
+
+/* @import "./debug.css";
+@import "./button.css";
+@import "./switch.css"; */
+
+
+/*
+	demo logic here
+*/
+
+main {
+	display: grid;
+	align-items: baseline;
+}
