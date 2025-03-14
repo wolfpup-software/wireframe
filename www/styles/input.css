@@ -1,5 +1,5 @@
 /* places for fonts and line heights */
-input[type=text] {
+input {
 	appearance: none;
 	border: 1px solid black;
 }

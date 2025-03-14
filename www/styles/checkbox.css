@@ -1,10 +1,10 @@
-input[role=switch] {
+input[type=checkbox] {
 	appearance: none;
-	inline-size: 3rem;
+	inline-size: 1rem;
 	block-size: 1rem;
 	border: 1px solid black;
 }
 
-input[role=switch]:checked {
+input[type=checkbox]:checked {
 	background-color: darkgray;
 }

@@ -1,10 +1,15 @@
 /* wireframe component styles */
 @import "./styles/baseboard.css";
+@import "./styles/typography.css";
 
-/* @import "./debug.css";
-@import "./button.css";
-@import "./switch.css"; */
-
+@import "./styles/input.css";
+@import "./styles/button.css";
+@import "./styles/checkbox.css";
+@import "./styles/radio.css";
+@import "./styles/switch.css";
+@import "./styles/text.css";
+@import "./styles/textarea.css";
+@import "./styles/select.css";
 
 /*
 	demo logic here
@@ -12,5 +17,7 @@
 
 main {
 	display: grid;
-	align-items: baseline;
+	vertical-align: text-bottom;
 }
+
+
