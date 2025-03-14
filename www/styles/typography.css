@@ -48,8 +48,9 @@ h2 {
 } */
 
 p {
-	line-height: 1rem;
-	/* margin-bottom: 1rem; */
+	line-height: 2rem;
+	margin-top: 0.5rem;
+	margin-bottom: -0.5rem;
 }
 
 h1 {
@@ -71,16 +72,23 @@ h3 {
 }
 
 h4 {
-	line-height: 1rem;
+	line-height: 2rem;
+	margin-top: 0.5rem;
+	margin-bottom: -0.5rem;
 }
 
 h5 {
-	line-height: 1rem;
-	margin-block-start: 0.125rem;
-	margin-block-end: -0.125rem;
+	line-height: 2rem;
+	margin-block-start: 0.7rem;
+	margin-block-end: -0.7rem;
 }
 
 h6 {
+	line-height: 2rem;
+	margin-block-start: 0.75rem;
+	/* margin-block-end: -1rem; */
+}
+
+input {
 	line-height: 1rem;
-	margin-block-start: 0.25rem;
 }

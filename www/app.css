@@ -1,0 +1,6 @@
+section[container] {
+	display: flex;
+	gap: 2rem;
+}
+
+section[content] section {}
