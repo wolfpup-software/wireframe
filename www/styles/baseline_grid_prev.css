@@ -1,0 +1,55 @@
+:root {
+	line-height: 2rem;
+}
+
+body {
+	/* font-family: 'Courier New', Courier, monospace; */
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+p {
+	line-height: 2rem;
+	margin-block-start: calc(-1 * (1em - 1cap));
+	margin-block-end: calc((1em - 1cap));
+}
+
+h1 {
+	line-height: 4rem;
+	font-size: 4rem;
+	margin-block-start: calc(-1 * (1em - 1cap) * 0.25);
+	margin-block-end: calc((1em - 1cap) * 0.25);
+}
+
+h2 {
+	line-height: 2rem;
+	margin-block-start: calc(-1 * (1em - 1cap));
+	margin-block-end: calc((1em - 1cap));
+}
+
+h3 {
+	line-height: 2rem;
+	margin-block-start: calc(-1 * (1em - 1cap));
+	margin-block-end: calc((1em - 1cap));
+}
+
+h4 {
+	line-height: 2rem;
+	margin-block-start: calc(-1 * (1em - 1cap));
+	margin-block-end: calc((1em - 1cap));
+}
+
+h5 {
+	line-height: 2rem;
+	margin-block-start: calc(-1 * (1em - 1cap));
+	margin-block-end: calc((1em - 1cap));
+}
+
+h6 {
+	line-height: 2rem;
+	margin-block-start: calc(-1 * (1em - 1cap));
+	margin-block-end: calc((1em - 1cap));
+}
+
+input {
+	line-height: 1rem;
+}

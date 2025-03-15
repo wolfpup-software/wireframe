@@ -1,7 +1,6 @@
 /* wireframe component styles */
 @import "./styles/background-grid.css";
 @import "./styles/baseboard.css";
-
 @import "./styles/input.css";
 @import "./styles/button.css";
 @import "./styles/checkbox.css";
@@ -19,5 +18,6 @@ main {
 	display: grid;
 	vertical-align: text-bottom;
 }
+
 
 
