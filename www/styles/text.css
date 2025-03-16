@@ -1,5 +1,20 @@
 /* places for fonts and line heights */
-input[type=text] {
+input {
+	background: none;
+}
+input[type=text], input[type=password], input[type=email] {
+	block-size: 2rem;
 	appearance: none;
-	border: 1px solid black;
+	display: relative;
+	border: none;
+	font-size: 1rem;
+	outline: 1px solid black;
+}
+
+
+input[type=time], input[type=date],  input[type=file], input[type=color] {
+	appearance: none;
+	block-size: 2rem;
+	font-size: 1rem;
+	border: none;
 }

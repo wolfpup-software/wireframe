@@ -1,10 +1,10 @@
 button, input[type=button] {
-	appearance: none;
+	/* appearance: none; */
 	background: #efefef;
 	border: 1px solid black;
 	color: #000000;
-	padding-inline: 1rem;
-	padding-block: 0.25rem;
+	/* padding-inline: 1rem;
+	padding-block: 0.25rem; */
 	border-radius: 4px;
 }
 

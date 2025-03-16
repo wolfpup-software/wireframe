@@ -2,9 +2,11 @@ input[role=switch] {
 	appearance: none;
 	inline-size: 3rem;
 	block-size: 1rem;
+	line-height: 1rem;
 	border: 1px solid black;
 }
 
 input[role=switch]:checked {
 	background-color: darkgray;
 }
+

@@ -1,10 +1,10 @@
 :root {
-	line-height: 2rem;
+	/* line-height: 2rem; */
 }
 
 body {
-	font-family: 'Courier New', Courier, monospace;
-	/* font-family: Georgia, 'Times New Roman', Times, serif; */
+	/* font-family: 'Courier New', Courier, monospace; */
+	font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 p {
@@ -53,8 +53,31 @@ h6 {
 	margin-block-end: calc((2rem - 1cap) * -0.5);
 }
 
-input {
-	line-height: 1rem;
-	margin-block-start: calc((2rem - 1cap) * 0.5);
-	margin-block-end: calc((2rem - 1cap) * -0.5);
+
+/* places for fonts and line heights */
+input[type=text], input[type=password], input[type=email] {
+	/* line-height: 2rem; */
+	block-size: 2rem;
+	font-size: 1rem;
+	line-height: 2rem;
+	/* padding-block-start: calc(1rem - 1cap); */
+	overflow: visible;
+
+	margin-block-start: calc((2rem - 1cap));
+	margin-block-end: calc((1rem - 1cap) * -1);
+
+	/* padding-block-start: calc(1rem - 1cap);
+	padding-block-end: calc(1rem - 1cap); */
+
+	/* padding-block-start: 1cap; */
+	/* padding-block-end: calc(0.5cap - 2px); */
+
+}
+
+input[type=time], input[type=date] {
+	block-size: 2rem;
+	font-size: 1rem;
+	margin-block-start: calc((1rem - 1cap));
+	margin-block-end: calc( -1 * (1rem - 1cap));
+	border: none;
 }
