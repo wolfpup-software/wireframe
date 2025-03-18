@@ -29,7 +29,8 @@ legend,
 td,
 textarea,
 th,
-select {
+select,
+option {
 	padding: 0;
 }
 
@@ -58,13 +59,18 @@ summary {
 
 
 /* additions */
-
 body {
 	min-block-size: 100dvh;
-	
 }
+
 :focus {
 	outline: var(--outline);
+	outline-offset: 0;
+}
+input:hover {
+	outline: var(--outline);
+	outline-color: lightblue;
+	outline-width: 2px;
 	outline-offset: 0;
 }
 ::selection {

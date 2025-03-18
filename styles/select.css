@@ -1,4 +1,4 @@
-select {
+select, select[multiple] {
 	background-color: transparent;
 	border: var(--border);
 	font-size: 1rem;

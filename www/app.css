@@ -2,9 +2,9 @@
 section[container] {
 	display: flex;
 	gap: 2rem;
-	outline: 1px solid blue;
+	/* outline: 1px solid blue; */
 }
 
 section {
-	outline: 1px solid blue;
+	/* outline: 1px solid blue; */
 }

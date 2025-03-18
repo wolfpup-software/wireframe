@@ -1,5 +1,6 @@
 textarea {
 	appearance: none;
+	background-color: transparent;
 	border: var(--border);
 
 	/* border: 1px solid/ black; */

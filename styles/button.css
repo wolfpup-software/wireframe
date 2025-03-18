@@ -44,6 +44,7 @@ button[type=submit], input[type=submit], input::file-selector-button  {
 	border: var(--border);
 	font-size: 1rem;
 	padding-inline: 1rem;
+	letter-spacing: 0.025em;
 	padding-block: 0.5rem;
 	border-radius: var(--border-radius);
 }

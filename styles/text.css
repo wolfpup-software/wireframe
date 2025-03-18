@@ -14,7 +14,7 @@ input[type=text], input[type=password], input[type=email] {
 	border-radius: var(--border-radius);
 }
 
-input::marker {
+input::selection {
 	color: var(--color);
 }
 
