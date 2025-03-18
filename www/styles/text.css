@@ -19,7 +19,7 @@ input[type=text]:disabled, input[type=password]:disabled, input[type=email]:disa
 	cursor:not-allowed;
 }
 
-input[type=time], input[type=date], input[type=color] {
+input[type=time], input[type=date], input[type=color], input[type=number] {
 	background: none;
 	appearance: none;
 	background-color: transparent;

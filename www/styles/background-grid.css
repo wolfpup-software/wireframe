@@ -1,8 +1,8 @@
 body {
 	background: repeating-linear-gradient(
 		white,
-		white calc(1rem - 1px),
-		#efefef calc(1rem - 1px),
-		#efefef 1rem
+		white calc(2rem - 1px),
+		#f7f7f7 calc(2rem - 1px),
+		#f7f7f7 2rem
 	);
 }

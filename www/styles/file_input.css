@@ -3,9 +3,5 @@ input[type=file] {
 	border-radius: var(--border-radius);
 }
 
-::file-selector-button {
-	cursor: pointer;
-	border-radius: var(--border-radius);
-}
 
-::file-selector-button:active {}
+

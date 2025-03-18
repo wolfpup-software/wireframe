@@ -1,6 +1,10 @@
-p {
+:root {
 	line-height: 2rem;
+}
+
+p {
 	font-size: 1rem;
+	max-inline-size: 80ch;
 }
 
 h1 {
@@ -13,7 +17,6 @@ h2 {
 	line-height: 3rem;
 	font-size: 3rem;
 	font-weight: 700;
-
 }
 
 h3 {
@@ -24,21 +27,18 @@ h3 {
 }
 
 h4 {
-	line-height: 2rem;
 	font-size: 1.75rem;
 	font-weight: 700;
 
 }
 
 h5 {
-	line-height: 2rem;
 	font-size: 1.25rem;
 	font-weight: 700;
 
 }
 
 h6 {
-	line-height: 2rem;
 	font-size: 1rem;
 	font-weight: 700;
 }
