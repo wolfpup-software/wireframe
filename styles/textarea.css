@@ -1,0 +1,12 @@
+textarea {
+	appearance: none;
+	background-color: transparent;
+	border: var(--border);
+
+	/* border: 1px solid/ black; */
+	font-family: var(--input-font-family);
+	font-size: 1rem;
+	padding: 0.5rem;
+	color: var(--color);
+	border-radius: var(--border-radius);
+}

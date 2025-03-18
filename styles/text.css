@@ -1,0 +1,39 @@
+/* places for fonts and line heights */
+
+input[type=text], input[type=password], input[type=email] {
+	background: none;
+	appearance: none;
+	display: relative;
+	background-color: transparent;
+	border: var(--border);
+	font-size: 1rem;
+	color: var(--color);
+	padding: 0.25rem;
+	font-family: var(--input-font-family);
+	padding: 0.5rem;
+	border-radius: var(--border-radius);
+}
+
+input::selection {
+	color: var(--color);
+}
+
+input[type=text]:disabled, input[type=password]:disabled, input[type=email]:disabled {
+	cursor:not-allowed;
+}
+
+input[type=time], input[type=date], input[type=color], input[type=number] {
+	background: none;
+	appearance: none;
+	background-color: transparent;
+	font-size: 1rem;
+	border: var(--border);
+	padding: 0.5rem;
+	color: var(--color);
+	font-family: var(--input-font-family);
+	border-radius: var(--border-radius);
+}
+
+input[type=time]:focus, input[type=date]:focus, input[type=color]:focus, input[type=number]:focus {
+	outline: var(--outline);
+}

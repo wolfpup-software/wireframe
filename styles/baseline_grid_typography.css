@@ -1,0 +1,83 @@
+/*  */
+
+
+p {
+	font-size: 1rem;
+	margin-block-start: calc((2em - 1cap) * 0.5);
+	margin-block-end: calc((2em - 1cap) * -0.5);
+}
+
+h1 {
+	line-height: 4rem;
+	font-size: 4rem;
+	margin-block-start: calc((4rem - 1cap) * 0.5);
+	margin-block-end: calc((4rem - 1cap) * -0.5);
+}
+
+h2 {
+	line-height: 4rem;
+	font-size: 3rem;
+	margin-block-start: calc((4rem - 1cap) * 0.5);
+	margin-block-end: calc((4rem - 1cap) * -0.5);
+}
+
+h3 {
+	line-height: 4rem;
+	font-size: 2.5rem;
+	margin-block-start: calc((4rem - 1cap) * 0.5);
+	margin-block-end: calc((4rem - 1cap) * -0.5);
+}
+
+h4 {
+	line-height: 2rem;
+	margin-block-start: calc((2rem - 1cap) * 0.5);
+	margin-block-end: calc((2rem - 1cap) * -0.5);
+}
+
+h5 {
+	line-height: 2rem;
+	margin-block-start: calc((2rem - 1cap) * 0.5);
+	margin-block-end: calc((2rem - 1cap) * -0.5);
+}
+
+h6 {
+	line-height: 2rem;
+	margin-block-start: calc((2rem - 1cap) * 0.5);
+	margin-block-end: calc((2rem - 1cap) * -0.5);
+}
+
+
+/* places for fonts and line heights */
+input[type=text], input[type=password], input[type=email] {
+	line-height: 2rem;
+	block-size: 2rem;
+	font-size: 1rem;
+
+	/* font size - capsize - padding */
+	margin-block-start: calc(((1rem - 1cap) * 1) - 0.25rem);
+	margin-block-end: calc(((1rem - 1cap) * -1) - 0.25rem);
+}
+
+input[type=time] {
+	block-size: 2rem;
+	font-size: 1rem;
+	margin-block-start: calc((1cap));
+	margin-block-end: calc( -1 * (1cap));
+	border: none;
+}
+
+input[type=date] {
+	block-size: 2rem;
+	font-size: 1rem;
+	margin-block-start: calc((1em - 1cap));
+	margin-block-end: calc( -1 * (1em - 1cap));
+	border: none;
+}
+
+input[type=file] {
+	line-height: 2rem;
+	font-size: 1rem;
+	
+	margin-block-start: calc((1em - 1cap));
+	margin-block-end: calc( -1 * (1em - 1cap));
+}

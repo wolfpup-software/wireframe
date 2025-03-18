@@ -1,0 +1,27 @@
+:root {
+	/* Typography */
+	--line-height: 2rem;
+	--letter-spacing: 0.01em;
+	--font-size: 1rem;
+	--font-family: Arial, Helvetica, sans-serif;
+	/* --font-family: Georgia, 'Times New Roman', Times, serif;  */
+	/* --input-font-family: Arial, Helvetica, sans-serif;  */
+
+	/* Interactivity Affordances */
+	--interactable-0: #f9f9f9; /* initial 'resting' state*/
+	--interactable-1: #f5f5f5; /* hover state */
+	--interactable-2: #dfdfdf; /* focus state */
+	--interactable-3: #a8a8a8; /* pressed state */
+	--interactable-4: #787878; /* checked state */
+	--border-radius: 2px;
+	--border: 1px solid black;
+	--outline: 4px solid cornflowerblue;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color: white;
+		--background-color: #17181A;
+		--border: 1px solid white;
+	}
+}

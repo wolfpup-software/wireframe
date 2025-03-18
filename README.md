@@ -1,25 +1,22 @@
 # Wireframe
 
-`Wireframe-rs` is a component set built for the web.
+`Wireframe-rs` is a CSS component set for rapid prototyping and high quality user interfaces.
 
-## Component Sets
+## About
 
-Each set is designed to connect function to a locality.
+A radically sane components for an insane frontend world.
 
-- [Paper]() is based on paper prototyping. Professional, clean enough for readable high density content. 
-- [Ascii]() references BIOS interfaces and 90s operating systems. It is beauracractic, formal, and clear. 
-- [Marker]() permanent marker. Casual, relaxed. Low density, low friction experiences.
+`Wireframe` builds high quality user interfaces.
+
+All components are:
+- actual html elements.
+- ARIA accessable.
+- themed with vanilla CSS.
+
+No more nutcase component APIs.
+
+Works with any framework.
 
 ## License
 
 `Wireframe` is released under the BSD 3-clause License.
-
-
-## Config
-
-```JSON
-{
-	"components": [],
-	"styles": "./yo/",
-}
-```

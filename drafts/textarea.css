@@ -7,6 +7,3 @@ textarea {
 	outline-offset: 8px;
 }
 
-textarea:focus {
-	outline: 4px solid blue;
-}

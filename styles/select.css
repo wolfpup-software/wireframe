@@ -1,0 +1,14 @@
+select, select[multiple] {
+	background-color: transparent;
+	border: var(--border);
+	font-size: 1rem;
+	padding: 0.5rem;
+	cursor: pointer;
+	color: var(--color);
+	font-family: var(--font-family);
+	border-radius: var(--border-radius);
+}
+
+select:focus {
+	outline: var(--outline);
+}

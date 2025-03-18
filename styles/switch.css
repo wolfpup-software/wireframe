@@ -1,0 +1,13 @@
+input[role=switch] {
+	appearance: none;
+	inline-size: 3.5rem;
+	block-size: 1.25rem;
+	line-height: 1rem;
+	border: var(--border);
+	cursor: pointer;
+}
+
+input[role=switch]:checked {
+	background-color: darkgray;
+}
+
