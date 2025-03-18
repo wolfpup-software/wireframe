@@ -1,18 +1,16 @@
 :root {
-	/* motion */
-	--duration: 250ms;
+	/* Typography */
+	--line-height: 2rem;
+	--font-family: Arial, Helvetica, sans-serif;
+	/* --input-font-family: Georgia, 'Times New Roman', Times, serif;  */
+	--input-font-family: Arial, Helvetica, sans-serif; 
 
-	/* focus */
-	--focus-outline: 2px solid blue;
-	--focus-outline-offset: 8px;
+	/* Interactivity Affordances */
+	--interactable-0: #f9f9f9; /* initial 'resting' state*/
+	--interactable-1: #f5f5f5; /* hover state */
+	--interactable-2: #dfdfdf; /* focus state */
+	--interactable-3: #a8a8a8; /* pressed state */
+	--interactable-4: #787878; /* checked state */
 
-	/* inputs */
-	--input-background: transparent;
-	--input-surface-color: black;
-	--input-border: 2px solid black;
-
-	/* input active state */
-
-	/* input disabled state */
-	--input-disabled-opacity: 0.5;
+	--border-radius: 2px;
 }

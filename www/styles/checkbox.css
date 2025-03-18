@@ -1,8 +1,20 @@
 input[type=checkbox] {
 	appearance: none;
-	inline-size: 1rem;
-	block-size: 1rem;
+	background-color: var(--interactable-0);
+	inline-size: 1.25rem;
+	block-size: 1.25rem;
 	border: 1px solid black;
+	border-radius: var(--border-radius);
+
+	cursor: pointer;
+}
+
+input[type=checkbox]:disabled {
+	cursor: not-allowed;
+}
+
+input[type=checkbox]:active {
+	background-color: black;
 }
 
 input[type=checkbox]:checked {

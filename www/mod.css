@@ -1,6 +1,8 @@
 /* wireframe component styles */
+@import "./styles/properties.css";
 @import "./styles/background-grid.css";
 @import "./styles/baseboard.css";
+@import "./styles/typography.css";
 @import "./styles/input.css";
 @import "./styles/button.css";
 @import "./styles/checkbox.css";
@@ -9,15 +11,4 @@
 @import "./styles/text.css";
 @import "./styles/textarea.css";
 @import "./styles/select.css";
-
-/*
-	demo logic here
-*/
-
-/* main {
-	display: grid;
-	vertical-align: text-bottom;
-}
- */
-
-
+@import "./styles/file_input.css";

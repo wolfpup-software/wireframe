@@ -58,6 +58,14 @@ summary {
 
 
 /* additions */
+:root {
+	font-family: var(--font-family);
+}
 body {
 	min-block-size: 100dvh;
+	
+}
+
+:disabled {
+	cursor: not-allowed;
 }

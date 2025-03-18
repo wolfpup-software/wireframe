@@ -1,0 +1,11 @@
+select {
+	background-color: transparent;
+	border: none;
+	outline: 1px solid black;
+	font-size: 1rem;
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+	font-family: var(--font-family);
+	border-radius: var(--border-radius);
+
+}

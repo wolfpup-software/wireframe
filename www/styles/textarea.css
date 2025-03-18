@@ -1,4 +1,11 @@
 textarea {
-	/* appearance: none; */
+	appearance: none;
+	border: none;
+	outline: 1px solid black;
+
 	/* border: 1px solid/ black; */
+	font-family: var(--input-font-family);
+	font-size: 1rem;
+	padding: 0.25rem 0.5rem;
+	border-radius: var(--border-radius);
 }

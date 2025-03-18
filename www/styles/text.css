@@ -1,20 +1,33 @@
 /* places for fonts and line heights */
-input {
-	background: none;
-}
+
 input[type=text], input[type=password], input[type=email] {
-	block-size: 2rem;
+	background: none;
 	appearance: none;
 	display: relative;
+	background-color: transparent;
 	border: none;
 	font-size: 1rem;
+	color: black;
 	outline: 1px solid black;
+	padding: 0.25rem 0.5rem;
+	font-family: var(--input-font-family);
+	padding: 0.5rem 1rem;
+	border-radius: var(--border-radius);
 }
 
+input[type=text]:disabled, input[type=password]:disabled, input[type=email]:disabled {
+	cursor:not-allowed;
+}
 
-input[type=time], input[type=date],  input[type=file], input[type=color] {
+input[type=time], input[type=date], input[type=color] {
+	background: none;
 	appearance: none;
-	block-size: 2rem;
+	background-color: transparent;
 	font-size: 1rem;
 	border: none;
+	padding: 0.5rem 1rem;
+	outline: 1px solid black;
+	font-family: var(--input-font-family);
+	border-radius: var(--border-radius);
 }
+

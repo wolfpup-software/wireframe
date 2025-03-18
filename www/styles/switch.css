@@ -1,9 +1,10 @@
 input[role=switch] {
 	appearance: none;
-	inline-size: 3rem;
-	block-size: 1rem;
+	inline-size: 3.5rem;
+	block-size: 1.25rem;
 	line-height: 1rem;
 	border: 1px solid black;
+	cursor: pointer;
 }
 
 input[role=switch]:checked {
