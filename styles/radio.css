@@ -1,7 +1,7 @@
 input[type=radio] {
 	appearance: none;
 	inline-size: 1.25rem;
-	background-color: var(--interactable-0);
+	/* background-color: var(--interactable-0); */
 	block-size: 1.25rem;
 	border: var(--border);
 	border-radius: 50%;

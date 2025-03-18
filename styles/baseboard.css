@@ -63,14 +63,12 @@ body {
 	min-block-size: 100dvh;
 }
 
-:focus {
+
+input:hover:not(:disabled) {
 	outline: var(--outline);
-	outline-offset: 0;
 }
-input:hover {
+input:focus {
 	outline: var(--outline);
-	outline-color: lightblue;
-	outline-width: 2px;
 	outline-offset: 0;
 }
 ::selection {

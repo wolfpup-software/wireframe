@@ -1,58 +1,21 @@
 # Wireframe
 
-`Wireframe-rs` is a component set built for the web.
+`Wireframe-rs` is a CSS component set for rapid prototyping and high quality user interfaces.
 
 ## About
 
-Wireframe is mostly a CSS library.
+A radically sane components for an insane frontend world.
 
-It also has some web components.
+`Wireframe` builds high quality user interfaces.
 
-## Config
+All components are:
+- actual html elements.
+- ARIA accessable.
+- themed with vanilla CSS.
 
-```JSON
-{
-	"components": [],
-	"styles": "./yo/",
-}
-```
+No more nutcase component APIs.
 
-### Foundations
-
-Interactivity by color.
-
-lightest gray - interactable
-gray - highlighted
-dark gray - pressed
-black - selected / checked
-
-## Components
-
-### Inputs
-
-- checkbox
-- radio
-- switch
-- date
-- time
-- text
-- email
-- phone
-
-### Actions
-
-- chips
-- buttons
-- action buttons
-- segmented buttons
-- menus
-
-### Containment
-
-- cards
-- dialogs
-- divider
-- lists
+Works with any framework.
 
 ## License
 
