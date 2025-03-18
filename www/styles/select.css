@@ -1,11 +1,14 @@
 select {
 	background-color: transparent;
-	border: none;
-	outline: 1px solid black;
+	border: var(--border);
 	font-size: 1rem;
-	padding: 0.5rem 1rem;
+	padding: 0.5rem;
 	cursor: pointer;
+	color: var(--color);
 	font-family: var(--font-family);
 	border-radius: var(--border-radius);
+}
 
+select:focus {
+	outline: var(--outline);
 }

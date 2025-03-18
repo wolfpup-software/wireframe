@@ -1,6 +1,7 @@
 input[type=file] {
 	cursor: pointer;
 	border-radius: var(--border-radius);
+	color: var(--color);
 }
 
 

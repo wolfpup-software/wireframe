@@ -3,7 +3,7 @@ input[type=radio] {
 	inline-size: 1.25rem;
 	background-color: var(--interactable-0);
 	block-size: 1.25rem;
-	border: 1px solid black;
+	border: var(--border);
 	border-radius: 50%;
 	cursor: pointer;
 }

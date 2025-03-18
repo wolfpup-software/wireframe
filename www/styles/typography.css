@@ -1,5 +1,12 @@
 :root {
-	line-height: 2rem;
+	line-height: var(--line-height);
+	font-family: var(--font-family);
+	letter-spacing: var(--letter-spacing);
+	color: var(--color);
+}
+
+body {
+	background-color: var(--background-color);
 }
 
 p {
@@ -35,7 +42,6 @@ h4 {
 h5 {
 	font-size: 1.25rem;
 	font-weight: 700;
-
 }
 
 h6 {

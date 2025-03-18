@@ -1,13 +1,15 @@
 button, input[type=button] {
 	appearance: none;
+	background: none;
 	background-color: var(--interactable-0);
 	border: none;
+	border: var(--border);
 	color: #000000;
 	padding-inline: 1rem;
 	padding-block: 0.4rem;
 	font-family: var(--input-font-family);
 	font-size: 1rem;
-	font-weight: 100;
+	font-weight: 700;
 	cursor: pointer;
 	border-radius: var(--border-radius);
 }
@@ -18,8 +20,6 @@ button:not([disabled]):active, input[type=button]:not([disabled]):active {
 }
 
 button:focus, input[type=button]:focus {
-	outline: 2px solid #676767;
-	outline-offset: 6px;
 	background-color: #efefef;
 }
 
@@ -32,17 +32,19 @@ button:disabled, input[type=button]:disabled {
 /* submit button */
 button[type=reset], input[type=reset] {
 	background: transparent;
-	border: 1px solid black;
+	border: var(--border);
 	padding-inline: 1rem;
 	padding-block: 0.5rem;
 	border-radius: var(--border-radius);
 }
 
-button[type=submit], input[type=submit],  input::file-selector-button  {
+button[type=submit], input[type=submit], input::file-selector-button  {
+	appearance: none;
 	background: transparent;
-	border: 1px solid black;
+	border: var(--border);
 	font-size: 1rem;
 	padding-inline: 1rem;
 	padding-block: 0.5rem;
 	border-radius: var(--border-radius);
 }
+

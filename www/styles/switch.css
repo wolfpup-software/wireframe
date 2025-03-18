@@ -3,7 +3,7 @@ input[role=switch] {
 	inline-size: 3.5rem;
 	block-size: 1.25rem;
 	line-height: 1rem;
-	border: 1px solid black;
+	border: var(--border);
 	cursor: pointer;
 }
 
