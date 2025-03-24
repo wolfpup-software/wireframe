@@ -57,29 +57,6 @@ summary {
 	list-style-type: none;
 }
 
-
-/* additions */
 body {
 	min-block-size: 100dvh;
-}
-
-
-input:hover:not(:disabled) {
-	outline: var(--outline);
-}
-input:focus {
-	outline: var(--outline);
-	outline-offset: 0;
-}
-::selection {
-	background-color: cornflowerblue;
-}
-
-::-webkit-calendar-picker-indicator {
-	background-color: white;
-	border-radius: 4px;
-}
-
-:disabled {
-	cursor: not-allowed;
 }

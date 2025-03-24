@@ -1,0 +1,11 @@
+section[container] {
+	display: flex;
+	gap: 2rem;
+	outline: 1px solid blue;
+}
+
+section[container] section {
+	outline: 1px solid blue;
+	flex-basis: 100%;
+	flex: 1;
+}

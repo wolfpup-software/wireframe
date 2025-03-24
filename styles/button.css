@@ -1,9 +1,7 @@
 button, input[type=button] {
 	appearance: none;
-	background: none;
-	background-color: var(--interactable-0);
-	border: none;
-	border: var(--border);
+	background-color: var(--action_bg-0);
+	border: var(--button_border);
 	color: #000000;
 	padding-inline: 1rem;
 	padding-block: 0.4rem;
@@ -31,21 +29,20 @@ button:disabled, input[type=button]:disabled {
 
 /* submit button */
 button[type=reset], input[type=reset] {
-	background: transparent;
-	border: var(--border);
-	padding-inline: 1rem;
+	background-color: var(--action_bg-0);
+	border: var(--button_border);	padding-inline: 1rem;
 	padding-block: 0.5rem;
 	border-radius: var(--border-radius);
 }
 
-button[type=submit], input[type=submit], input::file-selector-button  {
+button[type=submit], input[type=submit]  {
 	appearance: none;
-	background: transparent;
-	border: var(--border);
+	background-color: var(--action_bg-0);
+	border: var(--button_border);
 	font-size: 1rem;
 	padding-inline: 1rem;
 	letter-spacing: 0.025em;
 	padding-block: 0.5rem;
-	border-radius: var(--border-radius);
+	text-transform: uppercase;
 }
 

@@ -1,0 +1,8 @@
+body {
+	background: repeating-linear-gradient(
+		transparent,
+		transparent calc(2rem - 1px),
+		var(--baseline-grid-color) calc(2rem - 1px),
+		var(--baseline-grid-color) 2rem
+	);
+}

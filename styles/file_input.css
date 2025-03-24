@@ -4,5 +4,29 @@ input[type=file] {
 	color: var(--color);
 }
 
+input[type=file]:hover::file-selector-button {
+	outline: var(--outline);
+}
 
+::file-selector-button  {
+	appearance: none;
+	position: relative;
+	border: none;
+	background-color: var(--action_bg-0);
+	border: var(--button_border);
+	font-size: 1rem;
+	padding-inline: 1rem;
+	letter-spacing: 0.025em;
+	padding-block: 0.5rem;
+}
 
+input[type=file]:focus, input[type=file]:hover {
+}
+
+::file-selector-button:focus, file-selector-button:hover {
+	outline: var(--outline);
+	border: var(--button_border);
+}
+/* ::file-selector-button:hover, ::file-selector-button:focus {
+	outline: var(--outline);
+} */

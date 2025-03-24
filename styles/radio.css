@@ -1,11 +1,11 @@
 input[type=radio] {
 	appearance: none;
 	inline-size: 1.25rem;
-	/* background-color: var(--interactable-0); */
 	block-size: 1.25rem;
-	border: var(--border);
 	border-radius: 50%;
 	cursor: pointer;
+	background-color: var(--action_bg-0);
+	border: var(--button_border);
 }
 
 input[type=radio]:disabled {

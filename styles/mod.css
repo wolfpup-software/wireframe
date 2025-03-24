@@ -1,8 +1,12 @@
 /* wireframe component styles */
-@import "../styles/properties.css";
-@import "../styles/background-grid.css";
+@import "../styles/debug.css";
+
+/* Spacing, grids, typography */
+@import "../styles/root.css";
 @import "../styles/baseboard.css";
 @import "../styles/typography.css";
+
+/* Components */
 @import "../styles/input.css";
 @import "../styles/button.css";
 @import "../styles/checkbox.css";
@@ -12,3 +16,7 @@
 @import "../styles/textarea.css";
 @import "../styles/select.css";
 @import "../styles/file_input.css";
+
+/* Browser prefixes awaiting standardization / deprecation */
+@import "../styles/webkit.css";
+@import "../styles/firefox.css";

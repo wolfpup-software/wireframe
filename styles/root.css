@@ -1,0 +1,13 @@
+/* additions */
+
+input:hover:not(:disabled), button:hover:not(:disabled), select:hover:not(:disabled), textarea:hover:not(:disabled) {
+	outline: var(--outline);
+}
+input:focus, button:focus, textarea:focus, select:focus {
+	outline: var(--outline);
+	outline-offset: 0;
+}
+
+:disabled {
+	cursor: not-allowed;
+}

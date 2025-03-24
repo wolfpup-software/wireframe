@@ -1,0 +1,45 @@
+:root {
+	color-scheme: light dark;
+	/* Root */
+	--background-color: light-dark(#f9f9f9, #17181A);
+
+	/* debug */
+	--baseline-grid-color: light-dark(#a8a8a8, #f5f5f5);
+	
+	/* Typography */
+	--line-height: 2rem;
+	--font-size: 1rem;
+	--font-family: Arial, Helvetica, sans-serif;
+	--color: light-dark(black, white);
+
+	/* Grids */
+	--gap: 4ch;
+
+	/* Articles */
+	--max-char-width: 64ch;
+
+	/* Interactivity Affordances */
+	--action_bg-0: #f9f9f9; /* initial 'resting' state*/
+	--action_bg-1: #f5f5f5; /* hover state */
+	--action_bg-2: #dfdfdf; /* focus state */
+	--action_bg-3: #a8a8a8; /* pressed state */
+	--action_bg-4: #787878; /* checked state */
+	
+	/* Buttons */
+	--button_border-radius: 2px;
+	--button_border: 1px solid light-dark(black, white);
+	--button_font-weight: 700;
+
+	/* Text inputs */
+	--text-input-border: 1px solid light-dark(#dfdfdf, #787878);
+	--text-input_border-bottom: 1px solid light-dark(black, white);
+
+	/* Focus */
+	--outline: 4px solid cornflowerblue;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--border: 1px solid white;
+	}
+}

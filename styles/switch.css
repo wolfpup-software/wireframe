@@ -3,8 +3,9 @@ input[role=switch] {
 	inline-size: 3.5rem;
 	block-size: 1.25rem;
 	line-height: 1rem;
-	border: var(--border);
 	cursor: pointer;
+	background-color: var(--action_bg-0);
+	border: var(--button_border);
 }
 
 input[role=switch]:checked {
