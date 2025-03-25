@@ -2,20 +2,14 @@
 
 input[type=text], input[type=password], input[type=email] {
 	appearance: none;
-	display: relative;
-	background-color: var(--action_bg-0);
-	border: var(--text-input-border);
-	font-size: 1rem;
+	background-color: var(--action_bg-0, transparent);
 	color: var(--color);
-	padding: 0.25rem;
+	font-size: 1rem;
 	font-family: var(--input-font-family);
 	padding: 0.5rem;
-	border-radius: var(--border-radius);
+	border: var(--text-input-border);
 	border-bottom: var(--text-input_border-bottom);
-}
-
-input::selection {
-	color: var(--color);
+	border-radius: var(--button_border-radius);
 }
 
 input[type=text]:disabled, input[type=password]:disabled, input[type=email]:disabled {

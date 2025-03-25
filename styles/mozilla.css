@@ -1,0 +1,11 @@
+/* color */
+::-moz-color-swatch {}
+
+
+/* meter */
+::-moz-meter-bar {}
+
+/* range */
+::-moz-range-progress {}
+::-moz-range-thumb {}
+::-moz-range-track {}

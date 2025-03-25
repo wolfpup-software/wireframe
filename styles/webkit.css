@@ -3,7 +3,15 @@
 	border-radius: 4px;
 }
 
-/* :root {
-	-webkit-text-size-adjust: auto;
-	text-size-adjust: auto;
-} */
+/* slider */
+::-webkit-slider-thumb {}
+::-webkit-slider-runnable-track {}
+
+/* progress bar */
+::-webkit-progress-bar {}
+::-webkit-progress-inner-element {}
+::-webkit-progress-value {}
+
+/* meter */
+::-webkit-meter-bar {}
+::-webkit-meter-inner-element{}

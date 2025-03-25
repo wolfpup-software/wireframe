@@ -6,5 +6,5 @@ textarea {
 	font-size: 1rem;
 	padding: 0.5rem;
 	color: var(--color);
-	border-radius: var(--border-radius);
+	border-radius: var(--button_border-radius);
 }

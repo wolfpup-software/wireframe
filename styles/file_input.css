@@ -1,17 +1,21 @@
 input[type=file] {
+	appearance: none;
+	position:relative;
+	display: inline-block;
 	cursor: pointer;
-	border-radius: var(--border-radius);
+	/* doesn't make sense yet */
+	margin: -4px;
+	padding: 4px;
+	border-radius: var(--button_border-radius);
 	color: var(--color);
 }
 
-input[type=file]:hover::file-selector-button {
-	outline: var(--outline);
+input[type=file]:focus, input[type=file]:hover {
+	outline: none;
 }
 
+
 ::file-selector-button  {
-	appearance: none;
-	position: relative;
-	border: none;
 	background-color: var(--action_bg-0);
 	border: var(--button_border);
 	font-size: 1rem;
@@ -20,13 +24,18 @@ input[type=file]:hover::file-selector-button {
 	padding-block: 0.5rem;
 }
 
-input[type=file]:focus, input[type=file]:hover {
+:focus-within::file-selector-button, :focus::file-selector-button {
+	outline: var(--outline);
+	outline-offset: 0px;
 }
 
-::file-selector-button:focus, file-selector-button:hover {
+:hover::file-selector-button, :hover::file-selector-button {
 	outline: var(--outline);
-	border: var(--button_border);
+	outline-offset: 0px;
 }
-/* ::file-selector-button:hover, ::file-selector-button:focus {
-	outline: var(--outline);
+
+/* input[type="file"]:focus-within::file-selector-button,
+input[type="file"]:focus::file-selector-button {
+  outline: 2px solid #0964b0;
+  outline-offset: 2px;
 } */

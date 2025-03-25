@@ -1,52 +1,49 @@
+h1 {
+	line-height: var(--line-height-baseline-2x);
+	margin-block-start: calc((var(--line-height-baseline-2x) - 1cap) * 0.5);
+	margin-block-end: calc((var(--line-height-baseline-2x) - 1cap) * -0.5);
+}
+
+h2 {
+	line-height: var(--line-height-baseline-2x);
+	margin-block-start: calc((var(--line-height-baseline-2x) - 1cap) * 0.5);
+	margin-block-end: calc((var(--line-height-baseline-2x) - 1cap) * -0.5);
+}
+
+h3 {
+	line-height: var(--line-height-baseline-2x);
+	margin-block-start: calc((var(--line-height-baseline-2x) - 1cap) * 0.5);
+	margin-block-end: calc((var(--line-height-baseline-2x) - 1cap) * -0.5);
+}
+
+h4 {
+	line-height: var(--line-height);
+	margin-block-start: calc((var(--line-height) - 1cap) * 0.5);
+	margin-block-end: calc((var(--line-height) - 1cap) * -0.5);
+}
+
+h5 {
+	line-height: var(--line-height);
+	margin-block-start: calc((var(--line-height) - 1cap) * 0.5);
+	margin-block-end: calc((var(--line-height) - 1cap) * -0.5);
+}
+
+h6 {
+	line-height: var(--line-height);
+	margin-block-start: calc((var(--line-height) - 1cap) * 0.5);
+	margin-block-end: calc((var(--line-height) - 1cap) * -0.5);
+}
+
 p {
-	font-size: 1rem;
 	margin-block-start: calc((2em - 1cap) * 0.5);
 	margin-block-end: calc((2em - 1cap) * -0.5);
 }
 
-h1 {
-	line-height: 4rem;
-	font-size: 4rem;
-	margin-block-start: calc((4rem - 1cap) * 0.5);
-	margin-block-end: calc((4rem - 1cap) * -0.5);
-}
-
-h2 {
-	line-height: 4rem;
-	font-size: 3rem;
-	margin-block-start: calc((4rem - 1cap) * 0.5);
-	margin-block-end: calc((4rem - 1cap) * -0.5);
-}
-
-h3 {
-	line-height: 4rem;
-	font-size: 2.5rem;
-	margin-block-start: calc((4rem - 1cap) * 0.5);
-	margin-block-end: calc((4rem - 1cap) * -0.5);
-}
-
-h4 {
-	line-height: 2rem;
-	margin-block-start: calc((2rem - 1cap) * 0.5);
-	margin-block-end: calc((2rem - 1cap) * -0.5);
-}
-
-h5 {
-	line-height: 2rem;
-	margin-block-start: calc((2rem - 1cap) * 0.5);
-	margin-block-end: calc((2rem - 1cap) * -0.5);
-}
-
-h6 {
-	line-height: 2rem;
-	margin-block-start: calc((2rem - 1cap) * 0.5);
-	margin-block-end: calc((2rem - 1cap) * -0.5);
-}
 
 
 /* places for fonts and line heights */
 input[type=text], input[type=password], input[type=email] {
-	line-height: 2rem;
+	line-height: var(--line-height);
 	block-size: 2rem;
 	font-size: 1rem;
 
@@ -72,7 +69,7 @@ input[type=date] {
 }
 
 input[type=file] {
-	line-height: 2rem;
+	line-height: var(--line-height);
 	font-size: 1rem;
 	
 	margin-block-start: calc((1em - 1cap));

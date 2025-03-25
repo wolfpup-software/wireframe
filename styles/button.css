@@ -9,7 +9,7 @@ button, input[type=button] {
 	font-size: 1rem;
 	font-weight: 700;
 	cursor: pointer;
-	border-radius: var(--border-radius);
+	border-radius: var(--button_border-radius);
 }
 
 button:not([disabled]):active, input[type=button]:not([disabled]):active {
@@ -32,7 +32,7 @@ button[type=reset], input[type=reset] {
 	background-color: var(--action_bg-0);
 	border: var(--button_border);	padding-inline: 1rem;
 	padding-block: 0.5rem;
-	border-radius: var(--border-radius);
+	border-radius: var(--button_border-radius);
 }
 
 button[type=submit], input[type=submit]  {
@@ -43,6 +43,6 @@ button[type=submit], input[type=submit]  {
 	padding-inline: 1rem;
 	letter-spacing: 0.025em;
 	padding-block: 0.5rem;
-	text-transform: uppercase;
+	text-transform: capitalize;
 }
 
