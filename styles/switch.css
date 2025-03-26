@@ -6,6 +6,16 @@ input[role=switch] {
 	cursor: pointer;
 	background-color: var(--action_bg-0);
 	border: var(--button_border);
+
+	&:hover {}
+	&:focus {}
+	&:active {}
+	&:checked {
+		background-color: darkgray;
+	}
+	&:disabled {
+		cursor: not-allowed;
+	}
 }
 
 input[role=switch]:checked {

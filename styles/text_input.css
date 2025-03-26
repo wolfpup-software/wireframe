@@ -5,9 +5,12 @@
 	font: var(--text-input_font);
 	border: var(--text-input_border);
 	border-bottom: var(--text-input_border-bottom);
+	cursor: initial;
 
 	&:hover {}
 	&:focus {}
 	&:active {}
-	&:disabled {}
+	&:disabled {
+		cursor: not-allowed;
+	}
 }

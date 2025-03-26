@@ -1,15 +1,17 @@
 /* does css nesting provide a more concise sytnax for states? */
 :is(button, input[type=button]) {
-	/* put general properties here */
 	appearance: none;
 	background: var(--action_bg-1);
 	font: var(--button_font);
 	border: var(--button_border);
+	cursor: pointer;
 
 	&:hover {}
 	&:focus {}
 	&:active {}
-	&:disabled {}
+	&:disabled {
+		cursor: not-allowed;
+	}
 }
 
 

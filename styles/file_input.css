@@ -4,9 +4,14 @@ input[type=file] {
 	cursor: pointer;
 	font: var(--font);
 	color: var(--color);
+	cursor: pointer;
 	/* doesn't make sense yet */
 	margin: -4px;
 	padding: 4px;
+
+	&:disabled {
+		cursor: not-allowed;
+	}
 }
 
 ::file-selector-button  {
