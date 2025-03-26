@@ -6,8 +6,8 @@ textarea {
 	border: var(--text-input_border);
 	border-bottom: var(--text-input_border-bottom);
 
-	:hover {}
-	:focus {}
-	:active {}
-	:disabled {}
+	&:hover {}
+	&:focus {}
+	&:active {}
+	&:disabled {}
 }

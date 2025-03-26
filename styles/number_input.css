@@ -7,8 +7,8 @@
 	border: var(--number-input_border);
 	border-bottom: var(--number-input_border-bottom);
 
-	:hover {}
-	:focus {}
-	:active {}
-	:disabled {}
+	&:hover {}
+	&:focus {}
+	&:active {}
+	&:disabled {}
 }
