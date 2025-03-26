@@ -1,5 +1,5 @@
 /* places for fonts and line heights */
-textarea {
+:is(input[type=text], input[type=password], input[type=email], input[type=url]) {
 	appearance: none;
 	background: var(--text-input_bg);
 	font: var(--text-input_font);

@@ -1,0 +1,14 @@
+/* places for fonts and line heights */
+/* places for fonts and line heights */
+:is(input[type=time], input[type=date], input[type=datetime-local], input[type=number], input[type=phone]) {
+	appearance: none;
+	background: var(--number-input_bg);
+	font: var(--number-input_font);
+	border: var(--number-input_border);
+	border-bottom: var(--number-input_border-bottom);
+
+	&:hover {}
+	&:focus {}
+	&:active {}
+	&:disabled {}
+}

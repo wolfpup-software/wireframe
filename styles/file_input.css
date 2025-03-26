@@ -1,8 +1,33 @@
 input[type=file] {
+	appearance: none;
+	position:relative;
 	cursor: pointer;
-	border-radius: var(--border-radius);
+	font: var(--font);
 	color: var(--color);
+	/* doesn't make sense yet */
+	margin: -4px;
+	padding: 4px;
 }
 
+::file-selector-button  {
+	background-color: var(--action_bg-1);
+	font: var(--button_font);
+	border: var(--button_border);
+}
 
+/* :focus-within::file-selector-button, :focus::file-selector-button {
+	outline: var(--outline);
+	outline-offset: 0px;
+}
 
+:hover::file-selector-button, :hover::file-selector-button {
+	outline: var(--outline);
+	outline-offset: 0px;
+} */
+
+/* input[type="file"]:focus-within::file-selector-button,
+input[type="file"]:focus::file-selector-button {
+  outline: 2px solid #0964b0;
+  outline-offset: 2px;
+} */
+ 

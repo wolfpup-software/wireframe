@@ -1,0 +1,11 @@
+/* places for fonts and line heights */
+input[type=color] {
+	appearance: none;
+	background-color: var(--action_bg-1);
+	border: var(--button_border);
+
+	&:hover {}
+	&:focus {}
+	&:active {}
+	&:disabled {}
+}
