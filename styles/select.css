@@ -4,4 +4,12 @@ select{
 	background: var(--action_bg-1);
 	font: var(--select_font);
 	border: var(--select_border);
+	cursor: pointer;
+
+	&:hover {}
+	&:focus {}
+	&:active {}
+	&:disabled {
+		cursor: not-allowed;
+	}
 }

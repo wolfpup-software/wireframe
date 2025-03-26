@@ -6,9 +6,12 @@
 	font: var(--number-input_font);
 	border: var(--number-input_border);
 	border-bottom: var(--number-input_border-bottom);
+	cursor: text;
 
 	&:hover {}
 	&:focus {}
 	&:active {}
-	&:disabled {}
+	&:disabled {
+		cursor: not-allowed;
+	}
 }

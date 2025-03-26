@@ -3,9 +3,12 @@ input[type=color] {
 	appearance: none;
 	background-color: var(--action_bg-1);
 	border: var(--button_border);
+	cursor: pointer;
 
 	&:hover {}
 	&:focus {}
 	&:active {}
-	&:disabled {}
+	&:disabled {
+		cursor: not-allowed;
+	}
 }
