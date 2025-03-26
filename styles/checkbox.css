@@ -1,4 +1,4 @@
-input[type=checkbox] {
+:is(input[type=checkbox]) {
 	appearance: none;
 	inline-size: 1.25rem;
 	block-size: 1.25rem;
@@ -6,16 +6,14 @@ input[type=checkbox] {
 	border: none;
 	border: var(--button_border);
 	cursor: pointer;
-}
 
-input[type=checkbox]:disabled {
-	cursor: not-allowed;
-}
-
-input[type=checkbox]:active {
-	background-color: black;
-}
-
-input[type=checkbox]:checked {
-	background-color: darkgray;
+	&:hover {}
+	&:focus {}
+	&:active {}
+	&:checked {
+		background-color: darkgray;
+	}
+	&:disabled {
+		cursor: not-allowed;
+	}
 }

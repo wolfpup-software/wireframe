@@ -1,61 +1,67 @@
+/* Georgia, "Times New Roman", "Times", serif */
+
 :root {
 	color-scheme: light dark;
 
 	/* debug */
-	--baseline-grid-color: light-dark(#a8a8a8, #f5f5f5);
+	/* --baseline-grid-color: light-dark(#a8a8a8, #f5f5f5); */
 
 	/* Root */
-	--transition-time: 30ms;
 	--bg: light-dark(#f9f9f9, #17181A);
+	--transition-time: 30ms;
+	--line-height: 2rem;
 
 	/* Typography */
-	--line-height: 2rem;
-	--font-size: 1rem;
+	--font: 400 1rem/var(--line-height)  Arial, Helvetica, sans-serif;
 	--color: light-dark(black, white);
-	--font-family: Arial, Helvetica, sans-serif;
 
 	/* Headers */
-	--h6_font-size: 1rem;
-	--h5_font-size: 1.25rem;
-	--h4_font-size: 1.75rem;
-	--h3_font-size: 2.25rem;
-	--h2_font-size: 3rem;
-	--h1_font-size: 4rem;
-	--header-color: light-dark(darkblue, lightblue);
-	--header_font-family: Georgia, "Times New Roman", "Times", serif;
-	--sub-header_font-family: Georgia, "Times New Roman", "Times", serif;
+	--h1_font: 700 4rem/4rem Arial, Helvetica, sans-serif;
+	--h2_font: 700 3rem/3rem Arial, Helvetica, sans-serif;
+	--h3_font: 700 2.25rem/2.25rem Arial, Helvetica, sans-serif;
+	--h4_font: 700 1.75rem/1.75rem Arial, Helvetica, sans-serif;
+	--h5_font: 700 1.25rem/1.25rem Arial, Helvetica, sans-serif;
+	--h6_font: 700 1rem/1rem Arial, Helvetica, sans-serif;
+	--h1_color: light-dark(#3e3e3e, lightblue);
+	--h2_color: light-dark(#3e3e3e, lightblue);
+	--h3_color: light-dark(#3e3e3e, lightblue);
+	--h4_color: light-dark(#3e3e3e, lightblue);
+	--h5_color: light-dark(#3e3e3e, lightblue);
+	--h6_color: light-dark(#3e3e3e, lightblue);
+	/* -webkit-text-stroke */
+	/* text-shadow */
 
 	/* Selection */
 	--selection_bg-color: light-dark(cornflowerblue, cornflowerblue);
 	--selection_color: light-dark(white, black);
 
 	/* Buttons */
-	--button_line-height: var(--line-height);
-	--button_font-size: var(--font-size);
-	--button_font-family: Arial, Helvetica, sans-serif;
-	--button_font-weight: 700;
+	--button_font: 700 1rem/var(--line-height) Arial, Helvetica, sans-serif;
+	--button_bg: transparent;
 	--button_border: 1px solid light-dark(black, white);
 	--button_border-radius: 0px;
+	/* button elevation? */
 
 	/* Text inputs */
-	--text-input_line-height: var(--line-height);
-	--text-input_font-size: var(--font-size);
-	--text-input_font-family: Arial, Helvetica, sans-serif;
-	--text-input_font-weight: 100;
+	--text-input_font: 400 1rem/var(--line-height) Arial, Helvetica, sans-serif;
+	--text-input_bg: transparent;
 	--text-input_border: 1px solid light-dark(#dfdfdf, #787878);
 	--text-input_border-bottom: 1px solid light-dark(black, white);
 
 	/* Number inputs */
-	--number-input_line-height: var(--line-height);
-	--number-input_font-size: var(--font-size);
-	--number-input_font-family: Arial, Helvetica, sans-serif;
-	--number-input_font-weight: 100;
+	--number-input_font: 400 1rem/var(--line-height) Arial, Helvetica, sans-serif;
+	--number-input_bg: transparent;
 	--number-input_border: 1px solid light-dark(#dfdfdf, #787878);
 	--number-input_border-bottom: 1px solid light-dark(black, white);
 
+	/* Select */
+	--select_font: 400 1rem/var(--line-height) Arial, Helvetica, sans-serif;
+	--select_bg: transparent;
+	--select_border: 1px solid light-dark(black, white);
+
 	/* Actions - Interactivity Affordances */
 	--action_bg-0: #f9f9f9; /* initial 'resting' state*/
-	--action_bg-1: #f5f5f5; /* hover state */
+	--action_bg-1: #e5e5e5; /* hover state */
 	--action_bg-2: #dfdfdf; /* focus state */
 	--action_bg-3: #a8a8a8; /* pressed state */
 	--action_bg-4: #787878; /* checked state */
@@ -65,8 +71,8 @@
 	--outline: 4px solid cornflowerblue;
 
 	/* Baseline grid */
-	--baseline_line-height-2x: calc(var(--line-height) * 2);
-	--baseline_line-height-4x: calc(var(--line-height) * 4);
+	--baseline_line-height-2x: calc(var(--baseline_line-height) * 2);
+	--baseline_line-height-4x: calc(var(--baseline_line-height) * 4);
 	
 	/* Grids */
 	--gap: 1rem;

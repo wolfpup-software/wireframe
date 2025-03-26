@@ -1,14 +1,7 @@
-select, select[multiple] {
-	background-color: transparent;
-	font-size: 1rem;
-	padding: 0.5rem;
-	cursor: pointer;
-	color: var(--color);
-	font-family: var(--font-family);
-	background-color: var(--action_bg-0);
-	border: var(--button_border);
-}
-
-select:focus {
-	outline: var(--outline);
+select{
+	/* appearance: none; */
+	display: inline-block;
+	background: var(--action_bg-1);
+	font: var(--select_font);
+	border: var(--select_border);
 }
